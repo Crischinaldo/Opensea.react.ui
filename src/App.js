@@ -1,25 +1,38 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React, { Component } from 'react';
+import { Router, Route, Switch } from 'react-router-dom';
+import {CircleSpinner} from "react-spinners-kit";
+// import { renderRoutes } from 'react-router-config';
+//import './App.scss';
+
+//const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
+
+// Containers
+const DefaultLayout = React.lazy(() => import('./containers/layout/DefaultLayout'));
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+        loading: true,
+    };
+  }
+
+  color = "#900C3F";
+  loader = (loading) => <CircleSpinner size={30} color="#686769" loading={loading} />;
+
+  render() {
+    const { loading } = this.state;
+    return (
+    
+      <React.Suspense fallback={this.loader(loading)}>
+
+        <DefaultLayout/>
+      </React.Suspense>
+    );
+  }
 }
 
 export default App;
