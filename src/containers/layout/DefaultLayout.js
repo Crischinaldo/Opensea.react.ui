@@ -1,8 +1,17 @@
 import React, { Component, Suspense } from 'react';
-import { Redirect, Route, Switch } from 'react-router-dom';
-import * as router from 'react-router-dom';
-import { PushSpinner } from "react-spinners-kit";
-
+import LoaderSpinner from '../../components/widgets/LoaderSpinner';
+import {
+    NavItem,
+    NavLink,
+    Nav,
+    Container,
+    Row,
+    Col
+  } from "reactstrap";
+import _routes from '../../_routes';
+import { Route, Switch } from 'react-router-dom';
+import _nav from '../../_nav';
+    
 // routes config
 //import routes from '../../routes';
 
@@ -16,19 +25,42 @@ class DefaultLayout extends Component {
             loading: true,
         };
     }
-    
-    loader = (loading) => <PushSpinner size={30} color="#686769" loading={loading} />;
-
 
     render() {
         const { loading } = this.state;
+
         return (
             <div className="app">
-            <Suspense  fallback={this.loader(loading)}>
-                <DefaultHeader/>
+                <Suspense  fallback={LoaderSpinner(loading)}>
+                    <DefaultHeader/>
+                </Suspense>
+            <Suspense  fallback={LoaderSpinner(loading)}>
+                <div id="app-body">
+                    <main className="main">
+                        <Container fluid>
+                    <React.Suspense fallback={LoaderSpinner(loading)}>
+                        <Switch>
+                            {_routes.map((route, idx) => {
+                            return route.component ? (
+                                <Route
+                                key={idx}
+                                path={route.path}
+                                exact={route.exact}
+                                name={route.name}
+                                render={props => (
+                                    <route.component {...props} />
+                                )} />
+                            ) : null;
+                            })}
+                        </Switch>
+                        </React.Suspense>
+                        </Container>
+                    </main>
+                </div>
             </Suspense>
-                <div>app</div>
-            <Suspense  fallback={this.loader(loading)}>
+           
+
+            <Suspense  fallback={LoaderSpinner(loading)}>
                 <DefaultFooter/>
             </Suspense>
             </div>

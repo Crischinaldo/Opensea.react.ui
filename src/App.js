@@ -1,38 +1,32 @@
 //import logo from './logo.svg';
 import './App.css';
-
 import React, { Component } from 'react';
-import { Router, Route, Switch } from 'react-router-dom';
-import {CircleSpinner} from "react-spinners-kit";
+import LandingPage from './containers/pages/LandingPage';
+import DefaultLayout from './containers/layout/DefaultLayout';
+import { BrowserRouter} from 'react-router-dom';
+import LoaderSpinner from './components/widgets/LoaderSpinner';
 // import { renderRoutes } from 'react-router-config';
 //import './App.scss';
 
 //const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 
-// Containers
-const DefaultLayout = React.lazy(() => import('./containers/layout/DefaultLayout'));
-
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        loading: true,
+      loading: true,
     };
   }
-
-  color = "#900C3F";
-  loader = (loading) => <CircleSpinner size={30} color="#686769" loading={loading} />;
-
+  
   render() {
     const { loading } = this.state;
     return (
-    
-      <React.Suspense fallback={this.loader(loading)}>
-
-        <DefaultLayout/>
-      </React.Suspense>
+      <BrowserRouter>
+        <React.Suspense fallback={LoaderSpinner(loading)}>
+          <DefaultLayout body={LandingPage}/>
+        </React.Suspense>
+      </BrowserRouter>
     );
   }
 }
-
 export default App;
