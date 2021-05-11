@@ -36,7 +36,7 @@ class Navigation extends React.Component {
       document.body.scrollTop > 99
     ) {
       this.setState({
-        color: "bg-white"
+        color: "bg-darkgray"
       });
     } else if (
       document.documentElement.scrollTop < 100 ||
@@ -72,6 +72,8 @@ class Navigation extends React.Component {
     );
 
     return (
+
+      
       <Navbar
         className={"fixed-top " + this.state.color}
         color-on-scroll="100"
@@ -80,6 +82,19 @@ class Navigation extends React.Component {
         variant="dark"
       >
         <Container>
+
+        <div className="navbar-translate">
+            <NavbarBrand
+              data-placement="bottom"
+              to="/"
+              rel="noopener noreferrer"
+              tag={Link}
+            >
+              <span>Hirnlaub</span>
+
+            </NavbarBrand>
+          </div>
+
           <Collapse
             className={"justify-content-end " + this.state.collapseOut}
             navbar

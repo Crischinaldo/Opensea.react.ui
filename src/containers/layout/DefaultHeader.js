@@ -23,23 +23,9 @@ class DefaultHeader extends Component {
   const routes = _routes;
 
   return (
-      <div id="page-header header-filter">
-        <Container>
       <React.Suspense>
-        <div className="navbar-translate">
-            <NavbarBrand
-              data-placement="bottom"
-              to="/"
-              rel="noopener noreferrer"
-            >
-              <span>Our Brand</span>
-
-            </NavbarBrand>
-          </div>
         <Navigation config={navigation}/>
       </React.Suspense>
-      </Container>
-      </div>
     )
   }
 }

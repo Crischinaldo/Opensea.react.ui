@@ -31,38 +31,36 @@ class DefaultLayout extends Component {
 
         return (
             <div className="app">
+                <div id="app-body">
                 <Suspense  fallback={LoaderSpinner(loading)}>
                     <DefaultHeader/>
                 </Suspense>
-            <Suspense  fallback={LoaderSpinner(loading)}>
-                <div id="app-body">
-                    <main className="main">
-                        <Container fluid>
-                    <React.Suspense fallback={LoaderSpinner(loading)}>
-                        <Switch>
-                            {_routes.map((route, idx) => {
-                            return route.component ? (
-                                <Route
-                                key={idx}
-                                path={route.path}
-                                exact={route.exact}
-                                name={route.name}
-                                render={props => (
-                                    <route.component {...props} />
-                                )} />
-                            ) : null;
-                            })}
-                        </Switch>
-                        </React.Suspense>
-                        </Container>
-                    </main>
-                </div>
-            </Suspense>
-           
 
-            <Suspense  fallback={LoaderSpinner(loading)}>
-                <DefaultFooter/>
-            </Suspense>
+                    <main className="main">
+                         
+                                <React.Suspense fallback={LoaderSpinner(loading)}>
+                                    <Switch>
+                                        {_routes.map((route, idx) => {
+                                        return route.component ? (
+                                            <Route
+                                            key={idx}
+                                            path={route.path}
+                                            exact={route.exact}
+                                            name={route.name}
+                                            render={props => (
+                                                <route.component {...props} />
+                                            )} />
+                                        ) : null;
+                                        })}
+                                    </Switch>
+                                </React.Suspense>
+                  
+                    
+                        </main>
+                    <Suspense  fallback={LoaderSpinner(loading)}>
+                    <DefaultFooter/>
+                    </Suspense>
+                </div>
             </div>
         );
     }

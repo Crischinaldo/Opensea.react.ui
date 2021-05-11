@@ -1,0 +1,91 @@
+
+
+$asset-base-path: '../../../../assets' !default;
+
+// Core
+
+@import "custom/functions";
+@import "bootstrap/functions";
+
+@import "custom/variables";
+@import "bootstrap/variables";
+
+@import "custom/mixins";
+@import "bootstrap/mixins";
+
+// Bootstrap components
+
+@import "bootstrap/root";
+@import "bootstrap/reboot";
+@import "bootstrap/type";
+@import "bootstrap/images";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+@import "bootstrap/transitions";
+@import "bootstrap/dropdown";
+@import "bootstrap/button-group";
+@import "bootstrap/input-group";
+@import "bootstrap/custom-forms";
+@import "bootstrap/nav";
+@import "bootstrap/navbar";
+@import "bootstrap/card";
+@import "bootstrap/breadcrumb";
+@import "bootstrap/pagination";
+@import "bootstrap/badge";
+@import "bootstrap/jumbotron";
+@import "bootstrap/alert";
+@import "bootstrap/progress";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/close";
+@import "bootstrap/modal";
+@import "bootstrap/tooltip";
+@import "bootstrap/popover";
+@import "bootstrap/carousel";
+@import "bootstrap/utilities";
+@import "bootstrap/print";
+
+// Custom components
+
+@import "custom/_alerts.scss";
+@import "custom/_buttons.scss";
+@import "custom/_dropdown.scss";
+@import "custom/_footer.scss";
+@import "custom/_forms.scss";
+@import "custom/_images.scss";
+@import "custom/_modal.scss";
+@import "custom/_navbar.scss";
+@import "custom/_type.scss";
+@import "custom/_icons.scss";
+@import "custom/_tables.scss";
+@import "custom/_checkboxes-radio";
+@import "custom/_fixed-plugin";
+@import "custom/_pagination.scss";
+@import "custom/_misc.scss";
+@import "custom/_rtl.scss";
+@import "custom/_input-group.scss";
+@import "custom/_progress.scss";
+@import "custom/_badge.scss";
+@import "custom/_pills.scss";
+@import "custom/_tabs.scss";
+@import "custom/_info-areas.scss";
+@import "custom/_sections.scss";
+
+// Cards
+
+@import "custom/card";
+@import "custom/cards/card-chart";
+@import "custom/cards/card-map";
+@import "custom/cards/card-user";
+@import "custom/cards/card-task";
+@import "custom/cards/card-plain";
+@import "custom/cards/card-register";
+@import "custom/cards/card-stats";
+@import "custom/cards/card-chart";
+
+// React Differences
+
+@import "react/react-differences";

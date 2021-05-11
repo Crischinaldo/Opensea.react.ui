@@ -2,7 +2,13 @@ const navigation = {
     items: [
       {
         route: '/about',
-        name: 'Über Uns',
+        name: 'Über',
+        icon: 'ic_format_align_left'
+      },
+
+      {
+        route: '/collections',
+        name: 'Bilderkollektionen',
         icon: 'ic_format_align_left'
       },
     ],
