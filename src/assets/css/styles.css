@@ -9726,8 +9726,7 @@ img {
   .navbar.navbar-absolute {
     position: absolute;
     z-index: 1050; }
-  .navbar.navbar-transparent {
-    background: transparent !important;
+  .navbar.navbar-collapsed {
     padding-top: 25px; }
   .navbar.bg-white .navbar-nav .search-bar.input-group i {
     color: #222a42; }

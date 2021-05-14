@@ -18,7 +18,6 @@ class Navigation extends React.Component {
     super(props);
     this.state = {
       collapseOpen: false,
-      color: "navbar-transparent",
     };
   }
 
@@ -78,8 +77,6 @@ class Navigation extends React.Component {
         className={"fixed-top " + this.state.color}
         color-on-scroll="100"
         expand="lg"
-        bg="dark" 
-        variant="dark"
       >
         <Container>
 

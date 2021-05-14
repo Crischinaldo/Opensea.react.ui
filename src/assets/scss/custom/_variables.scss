@@ -26,6 +26,7 @@ $link-disabled:              #666666 !default;
 $transparent-bg:             transparent !default;
 $light-bg:                   #f5f6fa !default;
 $dark-background:            #555555 !default;
+$dark-900: #212125 !default;
 
 
 $grays: () !default;
@@ -117,6 +118,8 @@ $black-states:         #1d253b !default;
 
 $background-black:           #171941 !default;
 $background-states-black:    #1e1e24 !default;
+
+$background-white:           #FFFFFF !default;
 
 // opacity
 $default-opacity:      rgba(182, 182, 182, .6) !default;

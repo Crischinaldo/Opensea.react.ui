@@ -20,12 +20,7 @@ class AboutPage extends Component {
             <section className="section">
               <Container>
                 <Row className="row-grid justify-content-between">
-                  <Col lg="5" md="5">
-                  <img
-                    alt="ich"
-                    src={person}
-                  />
-                </Col>
+          
                   <Col md="6">
                     <div className="pl-md-5">
                       <h1 className="text-white">
@@ -53,6 +48,12 @@ class AboutPage extends Component {
                   </div>
                     </div>
                   </Col>
+                  <Col lg="5" md="5">
+                  <img
+                    alt="ich"
+                    src={person}
+                  />
+                </Col>
                 </Row>
               </Container>
             </section>

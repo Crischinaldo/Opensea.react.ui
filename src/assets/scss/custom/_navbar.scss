@@ -2,7 +2,7 @@
   padding: $navbar-padding-x;
   width: $full-width;
   z-index: 1050;
-  background: $gray-800;
+  background: $gray-900;
 
   .photo {
     display: inline-block;
@@ -51,7 +51,6 @@
 
 
   &.navbar-transparent{
-    background: $transparent-bg !important;
     padding-top: 25px;
   }
 
