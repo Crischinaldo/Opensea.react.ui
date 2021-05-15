@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as MaterialDesign from 'react-icons-kit/md';
+import * as icoMoon from 'react-icons-kit/icomoon';
 import Icon from 'react-icons-kit';
 
 import {
@@ -40,15 +40,15 @@ class SocialLinks extends React.Component {
              target="_blank"
              title={item.title}
         >
+             <i className={icoMoon[item.icon]} />
+            <Icon icon={icoMoon[item.icon]} />
 
           </NavLink>
         </NavItem>
     );
 
     return (
-        <Nav navbar>
-         {socialItems}
-        </Nav>
+        socialItems
     );
   }
 }

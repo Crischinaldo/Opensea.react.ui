@@ -1,8 +1,7 @@
 .navbar {
-  padding: $navbar-padding-x;
+  
   width: $full-width;
-  z-index: 1050;
-  background: $gray-900;
+  background: #212125;
 
   .photo {
     display: inline-block;
@@ -15,7 +14,6 @@
         width: $full-width;
       }
   }
-
   .navbar-nav{
     .nav-item .nav-link{
       position: relative;
@@ -27,7 +25,7 @@
       }
     }
   }
-
+  
   .navbar-wrapper {
     display: flex;
     align-items: center;

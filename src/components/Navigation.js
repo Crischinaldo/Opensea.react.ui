@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as MaterialDesign from 'react-icons-kit/md';
+import * as icoMoon from 'react-icons-kit/icomoon';
 import Icon from 'react-icons-kit';
 
 import {
@@ -18,34 +18,18 @@ class Navigation extends React.Component {
     super(props);
     this.state = {
       collapseOpen: false,
+      collapseOut: "",
+      expand: "",
     };
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.changeColor);
+    window.addEventListener("scroll", this.expand);
   }
 
   componentWillUnmount() {
-    window.removeEventListener("scroll", this.changeColor);
+    window.removeEventListener("scroll", this.expand);
   }
-
-  changeColor = () => {
-    if (
-      document.documentElement.scrollTop > 99 ||
-      document.body.scrollTop > 99
-    ) {
-      this.setState({
-        color: "bg-darkgray"
-      });
-    } else if (
-      document.documentElement.scrollTop < 100 ||
-      document.body.scrollTop < 100
-    ) {
-      this.setState({
-        color: "navbar-transparent"
-      });
-    }
-  };
 
   onCollapseExiting = () => {
     this.setState({
@@ -58,13 +42,53 @@ class Navigation extends React.Component {
     });
   };
 
+  setCollapseOpen = () => {
+    this.setState({collapseOpen: false});
+  }
+
+  setCollapseOut = () => {
+    this.setState({collapseOut: ""});
+  }
+
+  setExpandFalse = () => {
+    this.setState({expand: ""});
+  }
+
+  setExpandTrue = () => {
+    this.setState({expand: "nav-expand-bottom"});
+  }
+
+  setCollapseOut = () => {
+    this.setState({collapseOut: ""});
+  }
+
+  expand = () => {
+    if (
+      document.documentElement.scrollTop > 99 ||
+      document.body.scrollTop > 99
+    ) {
+      this.setExpandTrue();
+    } else if (
+      document.documentElement.scrollTop < 100 ||
+      document.body.scrollTop < 100
+    ) {
+      this.setExpandFalse();
+    }
+  };
+  
   render() {
+    const onCollapseExiting = () => {
+      this.setCollapseOut("collapsing-out");
+    };
+    const onCollapseExited = () => {
+      this.setCollapseOut("");
+    };
 
     const navItems = this.props.config.items.map((item, idx) =>
       <NavItem key={item.name}>
         <NavLink tag={Link} to={item.route}>
-          <i className={MaterialDesign[item.icon]} />
-          <Icon icon={MaterialDesign[item.icon]} />
+          <i className={icoMoon[item.icon]} />
+          <Icon icon={icoMoon[item.icon]} />
           {item.name}
           </NavLink>
         </NavItem>
@@ -74,12 +98,11 @@ class Navigation extends React.Component {
 
       
       <Navbar
-        className={"fixed-top " + this.state.color}
+        className={"fixed-top-under header-bottom " + this.state.expand}
         color-on-scroll="100"
         expand="lg"
       >
         <Container>
-
         <div className="navbar-translate">
             <NavbarBrand
               data-placement="bottom"
@@ -96,8 +119,8 @@ class Navigation extends React.Component {
             className={"justify-content-end " + this.state.collapseOut}
             navbar
             isOpen={this.state.collapseOpen}
-            onExiting={this.onCollapseExiting}
-            onExited={this.onCollapseExited}
+            onExiting={onCollapseExiting}
+            onExited={onCollapseExited}
           >
             <Nav navbar>
               {navItems}

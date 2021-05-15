@@ -2,20 +2,26 @@ const socialLinks = {
     items: [
       {
         link: 'https://twitter.com/#',
-        icon: 'fab fa-twitter',
+        icon: 'twitter',
         title: 'Follow me on twitter'
       },
 
       {
         link: 'https://facebook.com/#',
-        icon: 'fab fa-facebook-square',
+        icon: 'facebook',
         title: 'Follow me on facebook'
       },
 
       {
         link: 'https://instagram.com',
-        icon: 'fab fa-instagram',
+        icon: 'instagram',
         title: 'Follow me on instagram'
+      },
+
+      {
+        link: 'https://youtube.com',
+        icon: 'youtube',
+        title: 'Follow me on youtube'
       },
     ],
   };

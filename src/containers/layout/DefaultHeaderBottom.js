@@ -8,10 +8,8 @@ import LoaderSpinner from '../../components/widgets/LoaderSpinner';
 import { 
   Container,
   NavbarBrand } from 'reactstrap';
-import DefaultHeaderBottom from './DefaultHeaderBottom';
-import DefaultHeaderTop from './DefaultHeaderTop';
 
-class DefaultHeader extends Component {
+class DefaultHeaderBottom extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -23,19 +21,13 @@ class DefaultHeader extends Component {
 
   const { loading } = this.state;
   const navigation = _nav;
-  const routes = _routes;
 
   return (
-    <div id="header">
-      <React.Suspense>
-        <DefaultHeaderTop/>
-      </React.Suspense>
-      <React.Suspense>
-        <DefaultHeaderBottom/>
-      </React.Suspense>
-    </div>
+    <React.Suspense>
+        <Navigation config={navigation}/>
+    </React.Suspense>
     )
   }
 }
 
-export default DefaultHeader;
+export default DefaultHeaderBottom;

@@ -3,13 +3,13 @@ const navigation = {
       {
         route: '/about',
         name: 'Über',
-        icon: 'ic_format_align_left'
+        icon: 'home'
       },
 
       {
         route: '/collections',
         name: 'Bilderkollektionen',
-        icon: 'ic_format_align_left'
+        icon: 'home'
       },
     ],
   };

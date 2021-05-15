@@ -4751,6 +4751,14 @@ button.bg-white:hover,
 button.bg-white:focus {
   background-color: #e6e6e6 !important; }
 
+.bg-gray-900 {
+  background-color: #2d2f30 !important; }
+ 
+  a.bg-gray-900:hover, a.bg-gray-900:focus,
+  button.bg-gray-900:hover,
+  button.bg-gray-900:focus {
+    background-color: #e6e6e6 !important; }
+
 .bg-neutral {
   background-color: #ffffff !important; }
 
@@ -5477,12 +5485,14 @@ button.bg-darker:focus {
 .position-sticky {
   position: sticky !important; }
 
-.fixed-top {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
+.fixed-top-upper {
   z-index: 1030; }
+
+.fixed-top-under {
+  z-index: 1030; }
+
+.nav-expand {
+  padding-top: 25px; }
 
 .fixed-bottom {
   position: fixed;
@@ -9697,7 +9707,7 @@ img {
   padding: 0.9375rem;
   width: 100%;
   z-index: 1050;
-  background: #e14eca; }
+  background: #212125; }
   .navbar .photo {
     display: inline-block;
     height: 30px;
