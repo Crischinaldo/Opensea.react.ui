@@ -74,21 +74,34 @@
 }
 
 #header .header-top {
-  padding: 0.55rem 0 0.55rem 0;
+  padding: 0.4rem 0 0.4rem 0;
   transition: all 300ms ease 0s;
   display: flex;
 }
 
 
 #header .header-bottom {
-  padding-bottom: 2rem;
+  padding-bottom: 0.6rem;
 }
+
+#header .header-bottom .header-nav-item i::after  {
+  content: "\00a0 ";
+}
+
+#header .header-bottom .header-nav-item {
+  font-size: 1rem;
+  display: inline-block;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 700;
+}
+
 #header .nav-expand-top {
-  padding: 0.3rem 0 0.3rem 0;
+  padding: 0.2rem 0 0.2rem 0;
 }
 
 #header .nav-expand-bottom {
-  padding-bottom: 1rem;
+  padding-bottom: 0.3rem;
 }
 
 #header {

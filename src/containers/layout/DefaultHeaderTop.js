@@ -1,16 +1,9 @@
 import React from "react";
 
 import {
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
   Nav,
   Container,
 } from "reactstrap";
-import reactDom from "react-dom";
-//import _socialLinks from '../_sociallinks';
 import SocialLinks from '../../components/SocialLinks';
 import _socialLinks from '../../_sociallinks';
 
@@ -45,7 +38,6 @@ class HeaderTop extends React.Component {
     }
   };
   
-
   setExpandFalse = () => {
     this.setState({expand: ""});
   }
@@ -67,7 +59,6 @@ class HeaderTop extends React.Component {
        </Nav>
        </Container>
        </div>
-      
     );
   }
 }

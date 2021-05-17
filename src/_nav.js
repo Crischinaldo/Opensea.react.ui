@@ -1,15 +1,38 @@
 const navigation = {
     items: [
+
       {
-        route: '/about',
-        name: 'Über',
-        icon: 'home'
+        route: '/seasons',
+        name: 'Seasons',
+        icon: '',
+        dropdown: true
+      },
+      {
+        route: '/collections',
+        name: 'Collections',
+        icon: '',
+        dropdown: false
       },
 
       {
-        route: '/collections',
-        name: 'Bilderkollektionen',
-        icon: 'home'
+        route: '/wallpaper',
+        name: 'Wallpaper',
+        icon: '',
+        dropdown: false
+      },
+
+      {
+        route: '/about',
+        name: 'About',
+        icon: '',
+        dropdown: false
+      },
+
+      {
+        route: '/faq',
+        name: 'FAQ',
+        icon: '',
+        dropdown: false
       },
     ],
   };

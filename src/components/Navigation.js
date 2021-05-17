@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import * as icoMoon from 'react-icons-kit/icomoon';
 import Icon from 'react-icons-kit';
+import Logo from '../assets/images/logo.png';
 
 import {
   Collapse,
@@ -11,6 +12,10 @@ import {
   NavLink,
   Nav,
   Container,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownItem,
+  DropdownMenu
 } from "reactstrap";
 
 class Navigation extends React.Component {
@@ -86,11 +91,46 @@ class Navigation extends React.Component {
 
     const navItems = this.props.config.items.map((item, idx) =>
       <NavItem key={item.name}>
-        <NavLink tag={Link} to={item.route}>
-          <i className={icoMoon[item.icon]} />
-          <Icon icon={icoMoon[item.icon]} />
-          {item.name}
-          </NavLink>
+        {
+          !item.dropdown 
+          ? <NavLink tag={Link} to={item.route} className="header-nav-item">
+            {item.name}
+            </NavLink>
+          :  <UncontrolledDropdown nav>
+          <DropdownToggle
+            className="header-nav-item"
+            caret
+            color="default"
+            data-toggle="dropdown"
+            href="#pablo"
+            nav
+            onClick={(e) => e.preventDefault()}
+          >
+            <i className="fa fa-cogs d-lg-none d-xl-none" />
+            {item.name}
+          </DropdownToggle>
+          
+          <DropdownMenu className="dropdown-with-icons">
+            <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
+              <i className="tim-icons icon-paper" />
+              Documentation
+            </DropdownItem>
+            <DropdownItem tag={Link} to="/register-page">
+              <i className="tim-icons icon-bullet-list-67" />
+              Register Page
+            </DropdownItem>
+            <DropdownItem tag={Link} to="/landing-page">
+              <i className="tim-icons icon-image-02" />
+              Landing Page
+            </DropdownItem>
+            <DropdownItem tag={Link} to="/profile-page">
+              <i className="tim-icons icon-single-02" />
+              Profile Page
+            </DropdownItem>
+          </DropdownMenu>
+        </UncontrolledDropdown>
+        }
+        
         </NavItem>
     );
 
@@ -110,7 +150,7 @@ class Navigation extends React.Component {
               rel="noopener noreferrer"
               tag={Link}
             >
-              <span>Hirnlaub</span>
+              
 
             </NavbarBrand>
           </div>
