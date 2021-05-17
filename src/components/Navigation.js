@@ -102,7 +102,7 @@ class Navigation extends React.Component {
             caret
             color="default"
             data-toggle="dropdown"
-            href="#pablo"
+            href="seasons"
             nav
             onClick={(e) => e.preventDefault()}
           >
@@ -110,23 +110,14 @@ class Navigation extends React.Component {
             {item.name}
           </DropdownToggle>
           
-          <DropdownMenu className="dropdown-with-icons">
-            <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/overview">
-              <i className="tim-icons icon-paper" />
-              Documentation
+          <DropdownMenu className="dropdown">
+            <DropdownItem tag={Link} to="/seasons/1">
+              Season 1
             </DropdownItem>
-            <DropdownItem tag={Link} to="/register-page">
-              <i className="tim-icons icon-bullet-list-67" />
-              Register Page
+            <DropdownItem tag={Link} to="/seasons/2">
+              Season 2
             </DropdownItem>
-            <DropdownItem tag={Link} to="/landing-page">
-              <i className="tim-icons icon-image-02" />
-              Landing Page
-            </DropdownItem>
-            <DropdownItem tag={Link} to="/profile-page">
-              <i className="tim-icons icon-single-02" />
-              Profile Page
-            </DropdownItem>
+
           </DropdownMenu>
         </UncontrolledDropdown>
         }

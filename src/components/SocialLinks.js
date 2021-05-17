@@ -35,12 +35,12 @@ class SocialLinks extends React.Component {
       <NavItem id={item.name}>
         <NavLink
              data-placement="bottom"
-             href={item.href}
+             href={item.link}
              rel="noopener noreferrer"
              target="_blank"
              title={item.title}
         >
-             <i className={icoMoon[item.icon]} />
+            
             <Icon icon={icoMoon[item.icon]} />
 
           </NavLink>
