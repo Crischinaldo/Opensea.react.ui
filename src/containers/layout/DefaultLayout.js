@@ -36,33 +36,31 @@ class DefaultLayout extends Component {
                     <DefaultHeader/>
                 </Suspense>
 
-                    <main className="main">
-                         
-                                <React.Suspense fallback={LoaderSpinner(loading)}>
-                                    <Switch>
-                                        {_routes.map((route, idx) => {
-                                        return route.component ? (
-                                            <Route
-                                            key={idx}
-                                            path={route.path}
-                                            exact={route.exact}
-                                            name={route.name}
-                                            render={props => (
-                                                <route.component {...props} />
-                                            )} />
-                                        ) : null;
-                                        })}
-                                    </Switch>
-                                </React.Suspense>
-                  
-                    
-                        </main>
-                    <Suspense  fallback={LoaderSpinner(loading)}>
+                <main className="main">
+                    <React.Suspense fallback={LoaderSpinner(loading)}>
+                        <Switch>
+                            {_routes.map((route, idx) => {
+                            return route.component ? (
+                                <Route
+                                key={idx}
+                                path={route.path}
+                                exact={route.exact}
+                                name={route.name}
+                                render={props => (
+                                    <route.component {...props} />
+                                )} />
+                            ) : null;
+                            })}
+                        </Switch>
+                    </React.Suspense>
+                </main>
+
+                <Suspense  fallback={LoaderSpinner(loading)}>
                     <DefaultFooter/>
-                    </Suspense>
+                </Suspense>
                 </div>
             </div>
-        );
+        ); 
     }
 }
 

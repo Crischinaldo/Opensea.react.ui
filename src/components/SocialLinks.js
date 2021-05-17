@@ -32,7 +32,7 @@ class SocialLinks extends React.Component {
  
   render() {
     const socialItems = this.props.config.items.map((item, idx) =>
-      <NavItem key={item.name}>
+      <NavItem id={item.name}>
         <NavLink
              data-placement="bottom"
              href={item.href}
