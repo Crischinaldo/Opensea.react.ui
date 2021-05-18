@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import * as icoMoon from 'react-icons-kit/icomoon';
-import Icon from 'react-icons-kit';
-import Logo from '../assets/images/logo.png';
+import OpenSea from '../_opensea'
 
 import {
   Collapse,
@@ -25,11 +23,27 @@ class Navigation extends React.Component {
       collapseOpen: false,
       collapseOut: "",
       expand: "",
+      seasons: []
     };
   }
 
   componentDidMount() {
     window.addEventListener("scroll", this.expand);
+    
+    const url = OpenSea.endpoints.collection.url + '?asset_owner=' + OpenSea.walletAddress;
+    const options = {method: 'GET'};
+
+    fetch(url, options)
+    .then(res => res.json())
+    .then(json => 
+      {
+        const seasons = [];
+        json.map(function(collection) {
+          seasons.push(collection.slug);
+        })
+        this.setState({ seasons: [...this.state.seasons, ...seasons] }) 
+      })
+    .catch(err => console.error('error:' + err));
   }
 
   componentWillUnmount() {
@@ -80,11 +94,13 @@ class Navigation extends React.Component {
       this.setExpandFalse();
     }
   };
-  
+
   render() {
+    
     const onCollapseExiting = () => {
       this.setCollapseOut("collapsing-out");
     };
+
     const onCollapseExited = () => {
       this.setCollapseOut("");
     };
@@ -92,7 +108,7 @@ class Navigation extends React.Component {
     const navItems = this.props.config.items.map((item, idx) =>
       <NavItem key={item.name}>
         {
-          !item.dropdown 
+          ! item.dropdown 
           ? <NavLink tag={Link} to={item.route} className="header-nav-item">
             {item.name}
             </NavLink>
@@ -109,25 +125,20 @@ class Navigation extends React.Component {
             <i className="fa fa-cogs d-lg-none d-xl-none" />
             {item.name}
           </DropdownToggle>
-          
+  
           <DropdownMenu className="dropdown">
-            <DropdownItem tag={Link} to="/seasons/1">
-              Season 1
+          {this.state.seasons.reverse().map((season, i) =>
+            <DropdownItem tag={Link} to={"/seasons/" + season}>
+              {season}
             </DropdownItem>
-            <DropdownItem tag={Link} to="/seasons/2">
-              Season 2
-            </DropdownItem>
-
+          )}
           </DropdownMenu>
         </UncontrolledDropdown>
         }
-        
         </NavItem>
     );
 
     return (
-
-      
       <Navbar
         className={"fixed-top-under header-bottom " + this.state.expand}
         color-on-scroll="100"
@@ -141,8 +152,6 @@ class Navigation extends React.Component {
               rel="noopener noreferrer"
               tag={Link}
             >
-              
-
             </NavbarBrand>
           </div>
 

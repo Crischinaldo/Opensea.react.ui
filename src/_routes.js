@@ -9,7 +9,7 @@ const _routes = [
   { path: '/', exact: true, name: 'Home', component: LandingPage },
   { path: '/about', name: 'AboutMe', component: AboutPage },
   { path: '/collections', name: 'Collections', component: CollectionPage },
-  { path: '/seasons/:season_id', name: 'Seasons', component: SeasonPage }
+  { path: '/seasons/:season_name', name: 'Season', component: SeasonPage }
 ];
 
 export default _routes;
