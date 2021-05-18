@@ -38,7 +38,8 @@ class Navigation extends React.Component {
     .then(json => 
       {
         const seasons = [];
-        json.map(function(collection) {
+
+        json.forEach((collection, idx) => { 
           seasons.push(collection.slug);
         })
         this.setState({ seasons: [...this.state.seasons, ...seasons] }) 

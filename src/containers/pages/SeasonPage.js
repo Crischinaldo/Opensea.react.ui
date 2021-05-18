@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import {
   NavItem,
   NavLink,
@@ -8,55 +8,62 @@ import {
   Col,
   Button
 } from "reactstrap";
-import * as Web3 from 'web3';
-import { OpenSeaPort, Network } from 'opensea-js';
-
-
+import OpenSea from '../../_opensea';
+import Gallery from '../wrapper/Gallery';
 
 class SeasonPage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            season: "unset"
+            assetUrls: []
         };
     }
 
 
     componentDidMount() {
-        console.log(this.props.match.params.season_id);
-        window.addEventListener("scroll", this.expand);
         const fetch = require('node-fetch');
-
-        const url = 'https://api.opensea.io/api/v1/collections?limit=20&offset=0';
-        const options = {method: 'GET'};
         
+        const url = OpenSea.endpoints.assets.url 
+        + '?collection=' + this.props.match.params.season_name 
+        + '&owner=' + OpenSea.walletAddress
+        + '&asset_contract_address=' + OpenSea.contractAddress;
+        const options = {method: 'GET'};
+        console.log(url);
         fetch(url, options)
         .then(res => res.json())
-        .then(json => console.log(json))
+        .then(json => {
+            
+            const assets = [];
+            console.log(json);
+            json.assets.forEach((collection, idx) => { 
+                assets.push(collection.image_url);
+            })
+            this.setState({ assetUrls: [...this.state.assetUrls, ...assets] }) 
+            })
+
         .catch(err => console.error('error:' + err));
     }
 
     componentWillUnmount() {
-    window.removeEventListener("scroll", this.expand);
     }
    
 
     render() {
-       
         return (
-            
-                <div className="wrapper">
-                <section className="section section-l bg-white">
-                    <section className="section fade-in">
-                    <Container>
-                        
-                    </Container>
-                </section>
-                </section>
-                </div>
+            <div className="wrapper">
+            <section className="section section-l bg-white">
+                <section className="section fade-in">
+                <Container>
+                    <React.Suspense>
+                        <Gallery urls={this.state.assetUrls}/>
+                    </React.Suspense>
+                </Container>
+            </section>
+            </section>
+            </div>
         );
-    }
+    };
 }
 
 export default SeasonPage;
