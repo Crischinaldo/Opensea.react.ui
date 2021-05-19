@@ -32,8 +32,10 @@ class Gallery extends React.Component {
                 src={asset.image}
                 title={asset.title}
                 price={asset.price}
-                height="10rem"
-                width="10rem"
+                contract={asset.contractId}
+                token={asset.tokenId}
+                height="5rem"
+                width="5rem"
         />
         );
 

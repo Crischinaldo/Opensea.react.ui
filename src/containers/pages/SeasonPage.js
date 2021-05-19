@@ -10,8 +10,7 @@ import {
 } from "reactstrap";
 import OpenSea from '../../_opensea';
 import Gallery from '../wrapper/Gallery';
-import LoaderSpinner from '../../components/widgets/LoaderSpinner';
-import { useLocation } from 'react-router-dom';
+import LoaderSpinner from '../../components/widgets/LoaderSpinner'
 
 class SeasonPage extends Component {
 
@@ -25,7 +24,7 @@ class SeasonPage extends Component {
     }
 
     componentDidMount() {
-        const fetch = require('node-fetch');
+
     }
 
 
@@ -39,17 +38,16 @@ class SeasonPage extends Component {
 
     fetchAssets = () => {
         this.setState({assets: []});
+        // this.setState({seasonName: this.props.match.params.season_name}); - not working probably because of async threads
         this.state.seasonName = this.props.match.params.season_name;
         const url = OpenSea.endpoints.assets.url 
         + '?collection=' + this.props.match.params.season_name 
         + '&owner=' + OpenSea.walletAddress
         + '&asset_contract_address=' + OpenSea.contractAddress;
         const options = {method: 'GET'};
-        console.log(url);
         fetch(url, options)
         .then(res => res.json())
         .then(json => {
-        
             const _assets = [];
             console.log(json);
             json.assets.forEach((collection, idx) => { 
@@ -58,7 +56,7 @@ class SeasonPage extends Component {
                      "title": collection.name,
                      "price": collection.bid,
                      "contractId": collection.id,
-                     "tokenId": collection.tokenId
+                     "tokenId": collection.token_id
                     });
             })
             this.setState({ assets: [...this.state.assets, ..._assets] }) 
@@ -70,7 +68,7 @@ class SeasonPage extends Component {
    
 
     render() {
-        if (this.props.match.params.season_name != this.state.seasonName) {
+        if (this.props.match.params.season_name !== this.state.seasonName) {
             this.fetchAssets();
         }
 

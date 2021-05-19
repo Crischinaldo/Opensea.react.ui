@@ -44,31 +44,13 @@ class AssetPage extends Component {
         console.log(url);
         fetch(url, options)
         .then(res => res.json())
-        .then(json => {
-        
-            const _assets = [];
-            console.log(json);
-            json.assets.forEach((collection, idx) => { 
-                _assets.push(
-                    {"image": collection.image_url,
-                     "title": collection.name,
-                     "price": collection.bid,
-                     "contractId": collection.id,
-                     "tokenId": collection.tokenId
-                    });
-            })
-            this.setState({ assets: [...this.state.assets, ..._assets] }) 
-            })
-
+        .then(json => {})
         .catch(err => console.error('error:' + err));
     }
     
    
 
     render() {
-        if (this.props.match.params.season_name != this.state.seasonName) {
-            this.fetchAssets();
-        }
 
         const { loading } = this.state;
 
