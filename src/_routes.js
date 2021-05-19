@@ -11,7 +11,7 @@ const _routes = [
   { path: '/about', name: 'AboutMe', component: AboutPage },
   { path: '/collections', name: 'Collections', component: CollectionPage },
   { path: '/seasons/:season_name', name: 'Season', component: SeasonPage },
-  { path: '/asset/:token_id/:asset_id', name: 'Asset', component: AssetPage }
+  { path: '/asset/:contract_id/:asset_id', name: 'Asset', component: AssetPage }
 ];
 
 export default _routes;

@@ -20,12 +20,15 @@ class AssetPage extends Component {
         this.state = {
             asset: "",
             loading: true,
-            seasonName: ""
+            seasonName: "",
         };
     }
 
     componentDidMount() {
         const fetch = require('node-fetch');
+        console.log(this.props);
+        this.fetchAsset();
+
     }
 
     componentWillUnmount() {
@@ -38,13 +41,15 @@ class AssetPage extends Component {
     fetchAsset = () => {
         this.setState({asset: ""});
 
-        const url = OpenSea.endpoints.asset.url;
-
+        // 'https://api.opensea.io/api/v1/asset/{asset_contract_address}/{token_id}/'
+        const url = OpenSea.endpoints.asset.url.replace("{asset_contract_address}", this.props.match.params.contract_id).replace("{token_id}", this.props.match.params.asset_id);
         const options = {method: 'GET'};
         console.log(url);
         fetch(url, options)
         .then(res => res.json())
-        .then(json => {})
+        .then(json => {
+            console.log(json);
+        })
         .catch(err => console.error('error:' + err));
     }
     
