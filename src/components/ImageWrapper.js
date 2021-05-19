@@ -37,7 +37,7 @@ class ImageWrapper extends React.Component {
 
     componentDidMount() {
         let rawUrl = "/asset/{asset_contract_address}/{token_id}";
-        const href = rawUrl.replace("{asset_contract_address}", this.props.contract).replace("{token_id}", this.props.token);
+        const href = rawUrl.replace("{asset_contract_address}", OpenSea.contractAddress).replace("{token_id}", this.props.token);
         this.setState({assetHref: href});
  
     }
