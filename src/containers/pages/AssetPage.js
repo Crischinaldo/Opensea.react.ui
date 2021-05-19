@@ -13,12 +13,12 @@ import Gallery from '../wrapper/Gallery';
 import LoaderSpinner from '../../components/widgets/LoaderSpinner';
 import { useLocation } from 'react-router-dom';
 
-class SeasonPage extends Component {
+class AssetPage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            assets: [],
+            asset: "",
             loading: true,
             seasonName: ""
         };
@@ -28,8 +28,6 @@ class SeasonPage extends Component {
         const fetch = require('node-fetch');
     }
 
-
-
     componentWillUnmount() {
         this.setState({
             assets: [],
@@ -37,13 +35,11 @@ class SeasonPage extends Component {
             });
     }
 
-    fetchAssets = () => {
-        this.setState({assets: []});
-        this.state.seasonName = this.props.match.params.season_name;
-        const url = OpenSea.endpoints.assets.url 
-        + '?collection=' + this.props.match.params.season_name 
-        + '&owner=' + OpenSea.walletAddress
-        + '&asset_contract_address=' + OpenSea.contractAddress;
+    fetchAsset = () => {
+        this.setState({asset: ""});
+
+        const url = OpenSea.endpoints.asset.url;
+
         const options = {method: 'GET'};
         console.log(url);
         fetch(url, options)
@@ -81,9 +77,7 @@ class SeasonPage extends Component {
             <section className="section section-l bg-white">
                 <section className="section fade-in">
                 <Container>
-                    <React.Suspense fallback={LoaderSpinner(loading)}>
-                        <Gallery assets={this.state.assets}/>
-                    </React.Suspense>
+                    myasset
                 </Container>
             </section>
             </section>
@@ -92,4 +86,4 @@ class SeasonPage extends Component {
     };
 }
 
-export default SeasonPage;
+export default AssetPage;

@@ -26,12 +26,14 @@ class Gallery extends React.Component {
   }
     render() {
 
-        const images = this.props.urls.map((item, idx) =>
-        <img
+        const images = this.props.assets.map((asset, idx) =>
+        <ImageWrapper
                 alt="test"
-                src={item}
-                height="200rem"
-                width="200rem"
+                src={asset.image}
+                title={asset.title}
+                price={asset.price}
+                height="10rem"
+                width="10rem"
         />
         );
 
