@@ -42,18 +42,7 @@ class ImageWrapper extends React.Component {
     }
 
     render() {
-        console.log(this.props)
-
-        const assetUrl = () => {
-           // let rawUrl = OpenSea.endpoints.asset.url
-            let rawUrl = "/asset/{asset_contract_address}/{token_id}";
-            let href = rawUrl.replace("{asset_contract_address}", this.props.contractId).replace("{token_id}", this.props.token);
-            this.setState({assetHref: href});
-        }
-
-        
         return (
-
             <article className="image-outer-wrapper">
                 <article className="image-inner-wrapper">
                 <a href={this.state.assetHref} class="asset-anchor">

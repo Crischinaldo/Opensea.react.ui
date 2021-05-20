@@ -41,7 +41,7 @@ class Gallery extends React.Component {
         );
 
         return (
-            <div className="image-gallery">
+            <div className="container image-gallery">
                 {images}
             </div>
         );
