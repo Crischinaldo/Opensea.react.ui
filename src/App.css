@@ -136,11 +136,9 @@
   flex-wrap: wrap;
 }
 
-.article {
+.image-outer-wrapper {
   display: block;
   padding: 8px;
-  width: 60%;
-  height: 60%;
   cursor: pointer;
 }
 
@@ -152,8 +150,113 @@
     max-height: 100%;
 }
 
-.article:hover {
+.image-outer-wrapper:hover {
   transform: translateY(-2px);
   box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
   transition: all 0.1s ease 0s;
+}
+
+.image-inner-wrapper {
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 232, 235);
+  border-radius: 5px;
+  position: relative;
+  width: 315px;
+}
+
+.asset-anchor {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: initial;
+
+}
+
+.asset-header {
+  background: rgb(255, 255, 255);
+  padding: 12px 16px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
+.asset-content {
+  height: 299px;
+  width: 299px;
+  border-radius: 5px;
+  padding: 0px 8px;
+  position: relative;
+}
+
+.asset-card-footer {
+  padding: 12px;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  display: flex;
+  padding: 12px 16px;
+  flex-direction: column;
+}
+
+.asset-card-footer-content {
+
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  display: flex;
+}
+.asset-name-content {
+
+  min-width: 0px;
+  flex: 2 0 0%;
+}
+
+.asset-collection {
+  font-size: 11px !important;
+  color: rgb(138, 147, 155);
+  font-size: 2.67vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: flex;
+}
+
+.asset-name {
+
+  font-size: 12px !important;
+  line-height: 18px;
+  letter-spacing: 0.1px;
+  color: rgb(53, 56, 64);
+  font-size: 2.93vw;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.asset-price-header {
+  font-size: 11px !important;
+  color: rgb(138, 147, 155);
+  font-size: 2.67vw;
+  text-align: right;
+}
+
+.asset-price {
+  font-size: 11px !important;
+  margin-left: 0.15em;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.asset-content-asset {
+ 
+    min-height: inherit;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+
 }

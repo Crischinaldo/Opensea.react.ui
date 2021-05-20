@@ -22,8 +22,7 @@ import {
   CardBody,
   CardTitle,
   CardSubtitle,
-  Button
-
+  Button,
 } from "reactstrap";
 import { render } from "@testing-library/react";
 
@@ -55,24 +54,44 @@ class ImageWrapper extends React.Component {
         
         return (
 
-            <div className="article">
-                <a href={this.state.assetHref}>
-                <div className="image-wrapper">
-                    <Card body inverse style={{ backgroundColor: '#333', borderColor: '#333' }}>
-                    <CardImg 
-                    top 
-                    height="10rem"
-                    width="10rem"
-                    src={this.props.src} 
-                    alt={this.props.alt}  />
-                        <CardBody>
-                        <CardTitle tag="h5">{this.props.title}</CardTitle>
-                        <CardSubtitle tag="h6" className="mb-2 text-muted">price {this.props.price == null ? "0.00" : this.props.price}</CardSubtitle>
-                        </CardBody>
-                    </Card>
+            <article className="image-outer-wrapper">
+                <article className="image-inner-wrapper">
+                <a href={this.state.assetHref} class="asset-anchor">
+                <header class="asset-header"></header>
+                    <div class="asset-content">
+                        <div class="asset-content-asset">
+                            <img
+                            top 
+                            src={this.props.src} 
+                            alt={this.props.alt}  />
+
+                        </div>
+                    </div>
+                    <div className="asset-card-footer">
+                        <div className="asset-card-footer-content">
+                            <div className="asset-name-content">
+                                <div className="asset-collection">
+                                    {this.props.collection}
+                                </div>
+                                <div className="asset-name">
+                                    {this.props.title}
+                                </div>
+                            </div>
+
+                            <div className="asset-price-content">
+                                <div className="asset-price-header">
+                                    price
+                                </div>
+                                <div className="asset-price">
+                                {this.props.price == null ? "0.00" : this.props.price}
+                                </div>
+                            </div>
+
+                        </div>
                 </div>
                 </a>
-            </div>
+                </article>
+            </article>
 
         );
     };

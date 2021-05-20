@@ -50,13 +50,14 @@ class SeasonPage extends Component {
         .then(json => {
             const _assets = [];
             console.log(json);
-            json.assets.forEach((collection, idx) => { 
+            json.assets.forEach((asset, idx) => { 
                 _assets.push(
-                    {"image": collection.image_url,
-                     "title": collection.name,
-                     "price": collection.bid,
-                     "contractId": collection.id,
-                     "tokenId": collection.token_id
+                    {"image": asset.image_url,
+                     "title": asset.name,
+                     "price": asset.bid,
+                     "contractId": asset.id,
+                     "tokenId": asset.token_id,
+                     "collection": asset.collection.name
                     });
             })
             this.setState({ assets: [...this.state.assets, ..._assets] }) 

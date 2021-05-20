@@ -34,6 +34,7 @@ class Gallery extends React.Component {
                 price={asset.price}
                 contract={asset.contractId}
                 token={asset.tokenId}
+                collection={asset.collection}
                 height="5rem"
                 width="5rem"
         />
