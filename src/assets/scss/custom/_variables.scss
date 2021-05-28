@@ -66,6 +66,9 @@ $opacity-5:                  rgba(255,255,255, .5) !default;
 $opacity-6:                  rgba(255,255,255, .6) !default;
 $opacity-8:                  rgba(255,255,255, .8) !default;
 
+$opacity-primary-5:                  rgba(253, 93, 147, .5) !default;
+$opacity-primary-6:                  rgba(253, 93, 147, .6) !default;
+$opacity-primary-8:                  rgba(253, 93, 147, .8) !default;
 
 
 $opacity-1:                  rgba(255,255,255, .1) !default;
@@ -97,7 +100,7 @@ $default-color-opacity:      rgba(182, 182, 182, .6) !default;
 $orange-color:               #f96332 !default;
 
 $default:       #344675 !default;
-$primary:       #5603ad !default;
+$primary:       #fd5d93 !default;
 $secondary:     #f4f5f7 !default;
 $success:       #00f2c3 !default;
 $info:          #1d8cf8 !default;
@@ -747,7 +750,7 @@ $navbar-dark-bg:                    transparent !default;
 $navbar-dark-hover-bg:              rgba(255, 255, 255, .1);
 $navbar-dark-active-bg:             rgba(255, 255, 255, .1);
 $navbar-dark-color:                 rgba($white, .95);
-$navbar-dark-hover-color:           rgba($white, .65);
+$navbar-dark-hover-color:           rgba($pink, .65);
 $navbar-dark-active-color:          rgba($white, .65);
 $navbar-dark-disabled-color:        rgba($white, .25);
 $navbar-dark-toggler-border-color:  transparent !default;

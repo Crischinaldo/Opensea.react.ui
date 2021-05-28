@@ -27,7 +27,6 @@ class AssetPage extends Component {
     }
 
     componentDidMount() {
-        const fetch = require('node-fetch');
         console.log(this.props);
         this.fetchAsset();
 

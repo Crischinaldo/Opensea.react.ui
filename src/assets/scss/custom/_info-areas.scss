@@ -44,6 +44,9 @@ hr {
   &.line-deafult {
     background-color: $default;
   }
+  &.line-dark {
+    background-color: $dark;
+  }
 }
 
 .info-horizontal{

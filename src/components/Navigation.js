@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import OpenSea from '../_opensea'
+import Logo from '../assets/images/logo_font.png'
 
 import {
   Collapse,
@@ -23,6 +24,7 @@ class Navigation extends React.Component {
       collapseOpen: false,
       collapseOut: "",
       expand: "",
+      appLogo: "app-logo",
       seasons: []
     };
   }
@@ -78,6 +80,14 @@ class Navigation extends React.Component {
     this.setState({expand: "nav-expand-bottom"});
   }
 
+  setExpandLogoFalse = () => {
+    this.setState({appLogo: "app-logo"});
+  }
+
+  setExpandLogoTrue = () => {
+    this.setState({appLogo: "app-logo-small"});
+  }
+
   setCollapseOut = () => {
     this.setState({collapseOut: ""});
   }
@@ -88,16 +98,18 @@ class Navigation extends React.Component {
       document.body.scrollTop > 99
     ) {
       this.setExpandTrue();
+      this.setExpandLogoTrue();
     } else if (
       document.documentElement.scrollTop < 100 ||
       document.body.scrollTop < 100
     ) {
       this.setExpandFalse();
+      this.setExpandLogoFalse();
     }
   };
 
   render() {
-    
+
     const onCollapseExiting = () => {
       this.setCollapseOut("collapsing-out");
     };
@@ -146,13 +158,18 @@ class Navigation extends React.Component {
         expand="lg"
       >
         <Container>
-        <div className="navbar-translate">
+        <div className="navbar-translate header-logo" id={this.state.appLogo}>
             <NavbarBrand
               data-placement="bottom"
               to="/"
               rel="noopener noreferrer"
               tag={Link}
             >
+              <img
+                src={Logo}
+                width="50%"
+                height="50%"
+                />
             </NavbarBrand>
           </div>
 

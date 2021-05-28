@@ -6,50 +6,62 @@ import {
   Container,
   Row,
   Col,
-  Button
+  Button,
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
 } from "reactstrap";
-import bitcoinart from '../../assets/images/landing.webp';
+import slideShow1 from '../../assets/videos/slideshow_1.mp4';
+
 class LandingPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+
+    };
+  }
+
 
   render() {
+
+  
+   
 
     return (
         
           <div className="wrapper">
-            <section className="section section-l bg-white">
-              <section className="section fade-in">
-                <Container>
-                  <Row className="row-grid justify-content-between">
-                    <Col lg="5" md="5">
-                    <img
-                      alt="ich"
-                      src={bitcoinart}
-                      height="300rem"
-                      width="500rem"
-                    />
-                  </Col>
+            <section className="section section-l">
+              <Container>
+              <Container>
+                  <Row className="row-grid">
                     <Col md="6">
-                      <div className="pl-md-5">
-                        <h1 className="text-dark">
-                          Über den <br />
-                          Künstler
-                        </h1>
+                      <div className="pl-md-5 video-container">
+                      <video className='size-50 landing-video' autoPlay loop muted>
+                        <source src={slideShow1} type='video/mp4' />
+                      </video>
+                      </div>
+                    </Col>
+
+                    <Col md="5">
+                      <div className="pl-md-8">
+                        <h3 className="text-white">
+                          You want a unique nft just for you?
+                        </h3>
                          <hr className="line-primary" />
-                        <p className="text-dark">
-                          Ich bin der Künstler der unter den Pseudonym <a
+                        <p>You also have the option to order an <a
                           className="font-weight-bold text-info mt-5"
-                          href="#placeholder"
-                          onClick={e => e.preventDefault()}
+                          href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
+            
                         >
-                          Hirnlaub{" "}
-                        </a>
-                        </p>
-                        <br />
-                        <p className="text-dark">Ich habe bereits mehrere Werke veröffentlicht.
+                          nft{" "}
+                        </a><br/>
+                        Tell me your desired topic and your price and i will realize it in my vision and in my style. You get your unique nft which is only aviable once, just for you!
                         </p>
                         <br />
                         <div className="btn-wrapper mb-3">
-                      <Button className="btn-round" color="primary" type="button">
+                      <Button className="btn-round btn-nft" color="primary" type="button">
                         Erfahre Mehr
                       </Button>
                     </div>
@@ -57,44 +69,28 @@ class LandingPage extends Component {
                     </Col>
                   </Row>
                 </Container>
-              </section>
+              </Container>
             </section>
   
-             <section className="section section-l">
-              <section className="section">
+             <section className="section section-l about-me-section">
                 <Container>
-                  <Row className="row-grid justify-content-between">
-                    <Col md="6">
-                      <div className="pl-md-5">
-                        <h1 className="text-white">
-                          Meine Werke
-                        </h1>
+                      <div className="about-me-text">
+                        <h3 className="text-dark">
+                          Who is BrainxRain?
+                        </h3>
                          <hr className="line-primary" />
-                        <p>Meine <a
-                          className="font-weight-bold text-info mt-5"
-                          href="#placeholder"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Kollektionen{" "}
-                        </a>
-                          könnt ihr hier sehen.
-                        </p>
-                        <br />
-                        <p>Ich mache verschiedene Arten von Kunst.
+                        <p className="text-dark">I am a young artist from austria. I've been drawing for as long as i can remember and i love it! I like to deal with dark and profound topics. This is also reflected
+                          in my work. the asian Tattoo scene and various comics have shaped my style. I am pleased to make my works aviable to you this way.
                         </p>
                         <br />
                         <div className="btn-wrapper mb-3">
-                      <Button className="btn-round" color="primary" type="button">
+                      <Button className="btn-round about-me-btn" color="dark" type="button">
                         Erfahre Mehr
                       </Button>
                     </div>
-                      </div>
-                    </Col>
-                     <Col lg="5" md="5">
-                  </Col>
-                  </Row>
+                  </div>
+
                 </Container>
-              </section>
             </section>
 
             <section className="section section-l">

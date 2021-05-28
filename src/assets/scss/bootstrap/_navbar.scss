@@ -200,7 +200,7 @@
     color: $navbar-light-active-color;
 
     @include hover-focus {
-      color: $navbar-light-active-color;
+      color: $navbar-dark-active-color;
     }
   }
 
@@ -209,7 +209,7 @@
       color: $navbar-light-color;
 
       @include hover-focus {
-        color: $navbar-light-hover-color;
+        color: $navbar-dark-hover-color;
       }
 
       &.disabled {

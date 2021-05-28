@@ -1,5 +1,6 @@
 //import logo from './logo.svg';
 import './App.css';
+import './assets/css/styles.css';
 // import './App.scss';
 import React, { Component } from 'react';
 import LandingPage from './containers/pages/LandingPage';

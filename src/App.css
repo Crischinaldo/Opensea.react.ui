@@ -111,10 +111,54 @@
   z-index: 1050;
   position: fixed;
   line-height: normal;
-  
-  
 }
 
+.bg-darker {
+  background-color:  #0f0f0f;
+}
+
+.about-me-section {
+  background-image: url("./assets/images/about_me_background.png");
+  /* Center and scale the image nicely */
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: fit-content;
+  margin-top: -13rem !important;
+  height: 50rem;
+  padding-top: 30rem !important;
+  width: 100%;
+}
+
+.dark {
+  color: black;
+}
+
+.about-me-text {
+  width: 50%;
+  margin-left: 7rem;
+  margin-top: -10rem;
+}
+
+body {
+  background-image: url("./assets/images/background.jpg");
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.landing-video {
+  float: right;
+  text-align: right;
+}
+
+.size-50 {
+  height: 50%;
+  width: 50%;
+}
 #header .header-top .social-links {
   direction: rtl;
 }
@@ -125,10 +169,11 @@
 
 #header .header-top .social-links .nav-link {
   color: white;
+  transition: all 300ms ease 0s;
 }
 
 #header .header-top .social-links .nav-link:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(253, 93, 147, 0.8);
 }
 
 .image-gallery {
@@ -263,4 +308,33 @@
 
 .image-gallery {
   margin-top: 3rem;
+}
+
+#app-logo{
+  width: 40%;
+}
+
+#app-logo-small{
+  width: 30%;
+}
+
+.header-logo{
+  transition: all 300ms ease 0s;
+}
+
+.section {
+  margin-top: 10%;
+}
+
+.media-size {
+  height: 45rem;
+  width: 45rem;
+ 
+  position: relative;
+}
+
+.caroussel-item {
+  margin: 0 auto;
+  text-align: center;
+  
 }
