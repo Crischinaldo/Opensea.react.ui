@@ -20,12 +20,29 @@ import {
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
+    this.handleMouseHover = this.handleMouseHover.bind(this);
     this.state = {
       collapseOpen: false,
       collapseOut: "",
       expand: "",
       appLogo: "app-logo",
-      seasons: []
+      seasons: [],
+      dropdownOpen: true,
+    };
+  }
+
+  setDropdownOpen(open) {
+    this.setState({dropDownOpen: open})
+  }
+  
+
+  handleMouseHover() {
+    this.setState(this.toggleHoverState);
+  }
+
+  toggleHoverState(state) {
+    return {
+      isHovering: !state.isHovering,
     };
   }
 
@@ -118,6 +135,8 @@ class Navigation extends React.Component {
       this.setCollapseOut("");
     };
 
+    const toggle = () => this.setDropdownOpen(prevState => !prevState);
+
     const navItems = this.props.config.items.map((item, idx) =>
       <NavItem key={item.name}>
         {
@@ -127,6 +146,9 @@ class Navigation extends React.Component {
             </NavLink>
           :  <UncontrolledDropdown nav>
           <DropdownToggle
+            onMouseEnter={toggle}
+            onMouseLeave={toggle}
+            isOpen={this.dropdownOpen} 
             className="header-nav-item"
             caret
             color="default"
@@ -138,7 +160,6 @@ class Navigation extends React.Component {
             <i className="fa fa-cogs d-lg-none d-xl-none" />
             {item.name}
           </DropdownToggle>
-  
           <DropdownMenu className="dropdown">
           {this.state.seasons.reverse().map((season, i) =>
             <DropdownItem tag={Link} to={"/seasons/" + season}>

@@ -7683,10 +7683,10 @@ a.text-darker:hover, a.text-darker:focus {
 
 .btn-primary {
   background: #fd5d93;
-  background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93);
-  background-image: -o-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93);
-  background-image: -moz-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93);
-  background-image: linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93);
+  background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+  background-image: -o-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+  background-image: -moz-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+  background-image: linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
   background-size: 210% 210%;
   background-position: top right;
   background-color: #fd5d93;
@@ -7698,10 +7698,10 @@ a.text-darker:hover, a.text-darker:focus {
     transition: 0.3s ease-in-out; }
   .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.active:focus, .btn-primary.active:hover {
     background-color: #6603ad !important;
-    background-image: linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
-    background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
-    background-image: -o-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
-    background-image: -moz-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
+    background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+    background-image: -o-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+    background-image: -moz-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+    background-image: linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
     color: #ffffff;
     box-shadow: none; }
   .btn-primary:active {
@@ -7711,7 +7711,11 @@ a.text-darker:hover, a.text-darker:focus {
   .btn-primary:not([data-action]):hover {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transform: translateY(-1px);
-    -webkit-transform: translateY(-1px); }
+    -webkit-transform: translateY(-1px); 
+    background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+    background-image: -o-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+    background-image: -moz-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+    background-image: linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;}
   .btn-primary.disabled, .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary:disabled, .btn-primary:disabled:hover, .btn-primary:disabled:focus, .btn-primary:disabled.focus, .btn-primary:disabled:active, .btn-primary:disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus, .btn-primary[disabled]:active, .btn-primary[disabled].active,
   fieldset[disabled] .btn-primary,
   fieldset[disabled] .btn-primary:hover,
@@ -7736,10 +7740,10 @@ a.text-darker:hover, a.text-darker:focus {
       .btn-primary.btn-simple.active:hover, .btn-primary.btn-simple.active:focus, .btn-primary.btn-simple.active:active, .btn-primary.btn-simple.active:not(:disabled):not(.disabled):active {
         color: #ffffff;
         border-color: #fd5d93;
-        background-image: linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
-        background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
-        background-image: -o-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
-        background-image: -moz-linear-gradient(to bottom left, #fd5d93, #6603ad, #fd5d93) !important;
+        background-image: -webkit-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+        background-image: -o-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+        background-image: -moz-linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
+        background-image: linear-gradient(to bottom left, #fd5d93, #d60eab, #fd5d93) !important;
         background-color: #6603ad !important;
         box-shadow: none; }
   .btn-primary.btn-link {

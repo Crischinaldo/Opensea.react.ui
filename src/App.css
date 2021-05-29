@@ -123,10 +123,9 @@
   background-size: cover;
   background-repeat: no-repeat;
   width: fit-content;
-  margin-top: -13rem !important;
+  margin-top: -25rem !important;
   height: 50rem;
   padding-top: 30rem !important;
-  width: 100%;
 }
 
 .dark {
@@ -135,8 +134,9 @@
 
 .about-me-text {
   width: 50%;
-  margin-left: 7rem;
+  margin-left: 15rem;
   margin-top: -10rem;
+  
 }
 
 body {

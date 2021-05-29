@@ -34,7 +34,6 @@ class LandingPage extends Component {
           <div className="wrapper">
             <section className="section section-l">
               <Container>
-              <Container>
                   <Row className="row-grid">
                     <Col md="6">
                       <div className="pl-md-5 video-container">
@@ -62,35 +61,34 @@ class LandingPage extends Component {
                         <br />
                         <div className="btn-wrapper mb-3">
                       <Button className="btn-round btn-nft" color="primary" type="button">
-                        Erfahre Mehr
+                      Show More
                       </Button>
                     </div>
                       </div>
                     </Col>
                   </Row>
                 </Container>
-              </Container>
             </section>
   
-             <section className="section section-l about-me-section">
-                <Container>
+             <section className="section section-l">
+              <div className="about-me-section">
                       <div className="about-me-text">
                         <h3 className="text-dark">
                           Who is BrainxRain?
                         </h3>
-                         <hr className="line-primary" />
+                         <hr className="line-dark" />
                         <p className="text-dark">I am a young artist from austria. I've been drawing for as long as i can remember and i love it! I like to deal with dark and profound topics. This is also reflected
                           in my work. the asian Tattoo scene and various comics have shaped my style. I am pleased to make my works aviable to you this way.
                         </p>
                         <br />
                         <div className="btn-wrapper mb-3">
                       <Button className="btn-round about-me-btn" color="dark" type="button">
-                        Erfahre Mehr
+                        Show More
                       </Button>
                     </div>
                   </div>
-
-                </Container>
+              </div>
+                
             </section>
 
             <section className="section section-l">
