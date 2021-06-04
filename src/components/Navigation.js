@@ -190,6 +190,7 @@ class Navigation extends React.Component {
                 src={Logo}
                 width="50%"
                 height="50%"
+                alt="brainxrain logo"
                 />
             </NavbarBrand>
           </div>

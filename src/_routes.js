@@ -1,7 +1,7 @@
 import React from 'react';
 
 const LandingPage = React.lazy(() => import('./containers/pages/LandingPage'));
-const ProductPage = React.lazy(() => import('./containers/pages/ProductPage'));
+const ProductPage = React.lazy(() => import('./components/Product'));
 const SeasonPage = React.lazy(() => import('./containers/pages/SeasonPage'));
 const SeasonsPage = React.lazy(() => import('./containers/pages/SeasonsPage'));
 const AssetPage = React.lazy(() => import('./containers/pages/AssetPage'));

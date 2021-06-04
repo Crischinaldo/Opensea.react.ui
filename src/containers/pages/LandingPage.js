@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import {
   NavItem,
   NavLink,
@@ -13,17 +13,16 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
+import Product from '../../components/Product';
+
 import slideShow1 from '../../assets/videos/slideshow_1.mp4';
 
-class LandingPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+// https://stackoverflow.com/questions/47891112/how-to-react-js-event-on-scroll-load-other-components
+// https://stackblitz.com/edit/react-ls1dwp scroll
+const LandingPage = () => {
 
-    };
-  }
+    
 
-  render() {
     return (
         
           <div className="wrapper">
@@ -56,7 +55,7 @@ class LandingPage extends Component {
                         <br />
                         <div className="btn-wrapper mb-3">
                       <Button className="btn-round btn-nft" color="primary" type="button">
-                      Show More
+                      Buy now!
                       </Button>
                     </div>
                       </div>
@@ -65,7 +64,7 @@ class LandingPage extends Component {
                 </Container>
             </section>
   
-             <section className="section section-l">
+             <section className="section section-l pb-0">
               <div className="about-me-section">
                       <div className="about-me-text">
                         <h3 className="text-dark">
@@ -77,14 +76,13 @@ class LandingPage extends Component {
                         </p>
                         <br />
                         <div className="btn-wrapper mb-3">
-                      <Button className="btn-round about-me-btn" color="dark" type="button">
-                        Show More
-                      </Button>
                     </div>
                   </div>
               </div>
                 
             </section>
+
+            <Product/>
 
             <section className="section section-l section-various">
                 <Container>
@@ -140,8 +138,9 @@ class LandingPage extends Component {
                 </Container>
             </section>
           </div>
+    
     );
-  }
 }
+
 
 export default LandingPage;
