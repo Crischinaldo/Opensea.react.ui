@@ -216,11 +216,12 @@ body {
   height: 100%;
   overflow: hidden;
   pointer-events: initial;
+  background: #fd5d93;
 
 }
 
 .asset-header {
-  background: rgb(255, 255, 255);
+  background: #fd5d93;
   padding: 12px 16px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -244,6 +245,7 @@ body {
   display: flex;
   padding: 12px 16px;
   flex-direction: column;
+  background: #fd5d93;
 }
 
 .asset-card-footer-content {
@@ -260,7 +262,7 @@ body {
 
 .asset-collection {
   font-size: 11px !important;
-  color: rgb(138, 147, 155);
+  color: #fd5d93;
   font-size: 2.67vw;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -287,7 +289,7 @@ body {
 
 .asset-price-header {
   font-size: 11px !important;
-  color: rgb(138, 147, 155);
+  color: rgba(22, 56, 53, 0.527);
   font-size: 2.67vw;
   text-align: right;
 }
@@ -331,14 +333,25 @@ body {
 }
 
 .media-size {
-  height: 45rem;
-  width: 45rem;
+  height: 20rem;
+  width: 20rem;
  
   position: relative;
 }
+
 
 .caroussel-item {
   margin: 0 auto;
   text-align: center;
   
+}
+
+
+.section-various {
+  margin-top: 0 !important;
+  margin-bottom: 10rem !important;
+}
+
+.text-magenta {
+  color: #d80b71;
 }

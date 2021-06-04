@@ -28,9 +28,6 @@ class DefaultHeader extends Component {
   return (
     <div id="header">
       <React.Suspense>
-        <DefaultHeaderTop/>
-      </React.Suspense>
-      <React.Suspense>
         <DefaultHeaderBottom/>
       </React.Suspense>
     </div>

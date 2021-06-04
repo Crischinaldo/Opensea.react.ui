@@ -13,7 +13,6 @@ import person from '../../assets/images/some-guy.png';
 class AboutPage extends Component {
 
   render() {
-
     return (
             <div className="wrapper">
               <section className="section section-l">

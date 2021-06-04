@@ -23,12 +23,7 @@ class LandingPage extends Component {
     };
   }
 
-
   render() {
-
-  
-   
-
     return (
         
           <div className="wrapper">
@@ -91,60 +86,58 @@ class LandingPage extends Component {
                 
             </section>
 
-            <section className="section section-l">
-              <section className="section">
+            <section className="section section-l section-various">
                 <Container>
                   <Row className="row-grid justify-content-between">
                     <Col md="6">
                       <div className="pl-md-5">
                         <h1 className="text-white">
-                          Eure Wünsche
+                          Wallpaper
                         </h1>
                          <hr className="line-primary" />
-                        <p>Wenn ihr Wünsche habt könnt ihr mir diese <a
+                        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum<a
                           className="font-weight-bold text-info mt-5"
                           href="#placeholder"
                           onClick={e => e.preventDefault()}
                         >
-                          senden{" "}
+                          Lorem Ipsum{" "}
                         </a>
-                          . ich Freue mich über Motive.
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                         </p>
                         <br />
                         <div className="btn-wrapper mb-3">
-                      <Button className="btn-round" color="primary" type="button">
-                        Erfahre Mehr
-                      </Button>
-                    </div>
+                          <Button className="btn-round" color="primary" type="button">
+                             Show More
+                          </Button>
+                       </div>
                       </div>
                     </Col>
 
                     <Col md="6">
                       <div className="pl-md-5">
                         <h1 className="text-white">
-                          Support
+                          FAQ
                         </h1>
                          <hr className="line-primary" />
-                        <p>Wenn ihr mich supporten wollt könnt ihr ein <a
+                        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <a
                           className="font-weight-bold text-info mt-5"
                           href="#placeholder"
                           onClick={e => e.preventDefault()}
                         >
-                          patreon{" "}
+                          Lorem Ipsum {" "}
                         </a>
-                           werden. Patreons können mir spezielle Wünsche stellen. Joint mein Discord Channel.
+                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
                         </p>
                         <br />
                         <div className="btn-wrapper mb-3">
                       <Button className="btn-round" color="primary" type="button">
-                        Erfahre Mehr
+                        Show More
                       </Button>
                     </div>
                       </div>
                     </Col>
                   </Row>
                 </Container>
-            </section>
             </section>
           </div>
     );

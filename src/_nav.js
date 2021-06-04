@@ -9,25 +9,24 @@ const navigation = {
       },
       {
         route: '/collections',
-        name: 'Collections',
+        name: 'Commission',
+        icon: '',
+        dropdown: false
+      },
+      
+      {
+        route: '/product',
+        name: 'Product',
         icon: '',
         dropdown: false
       },
 
       {
-        route: '/wallpaper',
-        name: 'Wallpaper',
+        route: '/contact',
+        name: 'Contact',
         icon: '',
         dropdown: false
       },
-
-      {
-        route: '/about',
-        name: 'About',
-        icon: '',
-        dropdown: false
-      },
-
       {
         route: '/faq',
         name: 'FAQ',
