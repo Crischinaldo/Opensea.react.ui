@@ -7,7 +7,7 @@ import {
     Button,
   } from "reactstrap";
 import opening from '../assets/videos/opening.mp4';
-
+import ReactPlayer from 'react-player'
 const Welcome = (props) => {
     
     const handleClick = (e) => {
@@ -20,13 +20,17 @@ const Welcome = (props) => {
         <Container>
                 <Row className="row-grid justify-content">
                 <Col className="mt-3" md="6">
-                    <div className="pl-md-5 embed-responsive embed-responsive-16by9">
-                    <video className='sm landing-video embed-responsive-item' autoPlay loop muted>
-                    <source src={opening} type='video/mp4' />
-                    </video>
-                    </div>
-                </Col>
+                <div className="pl-md-5 embed-responsive embed-responsive-16by9">
+                        <ReactPlayer
+                className='react-player fixed-bottom embed-responsive-item'
+                url={opening}
+                width='100%'
+                height='100%'
+                controls = {true}
 
+                />
+                </div>
+                 </Col>
                 <Col className="col-7" md="5">
                     <div className="pl-md-8 mt-5">
                     <h2 className="text-magenta display-3">

@@ -89,15 +89,16 @@ const Product = (props) => {
         key={item.src}
         className="caroussel-item"
       >
-      <div className="pl-md-5 embed-responsive embed-responsive-1by1">
+      <div className="embed-responsive embed-responsive-1by1">
         {item.format === 'image' 
         
-          ? <img className='embed-responsive-item media-size' src={media[item.idx]} alt={item.altText} />
-          : <video className='sm landing-video embed-responsive-item' autoPlay loop muted>
+          ? <img className='embed-responsive-item' src={media[item.idx]} alt={item.altText} />
+          : <video className='embed-responsive-item' autoPlay loop muted>
               <source src={media[item.idx]} type='video/mp4' />
             </video>
         }
         </div>
+
         <CarouselCaption/>
       </CarouselItem>
     );
@@ -106,7 +107,7 @@ const Product = (props) => {
     <section ref={ref} className={"section component-transition section-l " + visible}>
       <Container>
       <Row>
-      <Col>
+      <Col md="6">
         <Carousel
           activeIndex={activeIndex}
           next={next}
@@ -115,7 +116,7 @@ const Product = (props) => {
           {slides}
         </Carousel>
       </Col>
-      <Col>
+      <Col md="6">
       <div className="pl-md-3">
         <h2 className="text-magenta display-3">
           What do i get, when i buy an <span className="font-weight-bold">NFT</span> from <span className="font-weight-bold">BrainXRain</span>
