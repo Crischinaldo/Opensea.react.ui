@@ -1,4 +1,4 @@
-import React, { Component, useEffect } from 'react';
+import React, { Component, useEffect, useState, Suspense } from 'react';
 import {
   NavItem,
   NavLink,
@@ -13,132 +13,55 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
+import Welcome from '../../components/Welcome';
 import Product from '../../components/Product';
+import Commission from '../../components/Commission';
+import WhoAmI from '../../components/WhoAmI';
+import Faq from '../../components/Faq';
+
+import LoaderSpinner from '../../components/widgets/LoaderSpinner';
 
 import slideShow1 from '../../assets/videos/slideshow_1.mp4';
+
+const DefaultFooter = React.lazy(() => import('../layout/default/DefaultFooter'));
+const DefaultHeader = React.lazy(() => import('../layout/default/DefaultHeader'));
 
 // https://stackoverflow.com/questions/47891112/how-to-react-js-event-on-scroll-load-other-components
 // https://stackblitz.com/edit/react-ls1dwp scroll
 const LandingPage = () => {
 
-    
-
-    return (
+    const [isLoading, setLoading] = useState(true);
+    return (<>
+      <Suspense  fallback={LoaderSpinner(isLoading)}>
+        <DefaultHeader/>
+      </Suspense>
         
+
           <div className="wrapper">
-            <section className="section section-l">
-              <Container>
-                  <Row className="row-grid">
-                    <Col md="6">
-                      <div className="pl-md-5 video-container">
-                      <video className='size-50 landing-video' autoPlay loop muted>
-                        <source src={slideShow1} type='video/mp4' />
-                      </video>
-                      </div>
-                    </Col>
-
-                    <Col md="5">
-                      <div className="pl-md-8">
-                        <h3 className="text-white">
-                          You want a unique nft just for you?
-                        </h3>
-                         <hr className="line-primary" />
-                        <p>You also have the option to order an <a
-                          className="font-weight-bold text-info mt-5"
-                          href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
-            
-                        >
-                          nft{" "}
-                        </a><br/>
-                        Tell me your desired topic and your price and i will realize it in my vision and in my style. You get your unique nft which is only aviable once, just for you!
-                        </p>
-                        <br />
-                        <div className="btn-wrapper mb-3">
-                      <Button className="btn-round btn-nft" color="primary" type="button">
-                      Buy now!
-                      </Button>
-                    </div>
-                      </div>
-                    </Col>
-                  </Row>
-                </Container>
-            </section>
-  
-             <section className="section section-l pb-0">
-              <div className="about-me-section">
-                      <div className="about-me-text">
-                        <h3 className="text-dark">
-                          Who is BrainxRain?
-                        </h3>
-                         <hr className="line-dark" />
-                        <p className="text-dark">I am a young artist from austria. I've been drawing for as long as i can remember and i love it! I like to deal with dark and profound topics. This is also reflected
-                          in my work. the asian Tattoo scene and various comics have shaped my style. I am pleased to make my works aviable to you this way.
-                        </p>
-                        <br />
-                        <div className="btn-wrapper mb-3">
-                    </div>
-                  </div>
-              </div>
-                
-            </section>
-
+           <div className="about-me-image-wrapper"/>
+           <div className="welcome-section-background primary-border-bottom">
+           <Suspense  fallback={LoaderSpinner(isLoading)}>
+            <Welcome/>
+            </Suspense>
+            <Suspense  fallback={LoaderSpinner(isLoading)}>
             <Product/>
-
-            <section className="section section-l section-various">
-                <Container>
-                  <Row className="row-grid justify-content-between">
-                    <Col md="6">
-                      <div className="pl-md-5">
-                        <h1 className="text-white">
-                          Wallpaper
-                        </h1>
-                         <hr className="line-primary" />
-                        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum<a
-                          className="font-weight-bold text-info mt-5"
-                          href="#placeholder"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Lorem Ipsum{" "}
-                        </a>
-                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                        </p>
-                        <br />
-                        <div className="btn-wrapper mb-3">
-                          <Button className="btn-round" color="primary" type="button">
-                             Show More
-                          </Button>
-                       </div>
-                      </div>
-                    </Col>
-
-                    <Col md="6">
-                      <div className="pl-md-5">
-                        <h1 className="text-white">
-                          FAQ
-                        </h1>
-                         <hr className="line-primary" />
-                        <p>Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum <a
-                          className="font-weight-bold text-info mt-5"
-                          href="#placeholder"
-                          onClick={e => e.preventDefault()}
-                        >
-                          Lorem Ipsum {" "}
-                        </a>
-                        Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem IpsumLorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                        </p>
-                        <br />
-                        <div className="btn-wrapper mb-3">
-                      <Button className="btn-round" color="primary" type="button">
-                        Show More
-                      </Button>
-                    </div>
-                      </div>
-                    </Col>
-                  </Row>
-                </Container>
-            </section>
+            </Suspense>
+            <Suspense  fallback={LoaderSpinner(isLoading)}>
+            <Commission/>
+            </Suspense>
+            <Suspense  fallback={LoaderSpinner(isLoading)}>
+            <WhoAmI/>
+            </Suspense>
+            <Suspense  fallback={LoaderSpinner(isLoading)}>
+            <Faq/>
+            </Suspense>
+            </div>
           </div>
-    
+
+      <Suspense  fallback={LoaderSpinner(isLoading)}>
+        <DefaultFooter/>
+      </Suspense>
+    </>
     );
 }
 

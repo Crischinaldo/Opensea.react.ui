@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Navigation from '../../components/Navigation';
+import Navigation from '../../../components/Navigation';
 import HeaderTop from './DefaultHeaderTop';
-import _routes from '../../_routes';
+import _routes from '../../../_routes';
 import { Route, Switch } from 'react-router-dom';
-import _nav from '../../_nav';
-import LoaderSpinner from '../../components/widgets/LoaderSpinner';
+import _nav from '../../../_nav';
+import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
 import { 
   Container,
   NavbarBrand } from 'reactstrap';
@@ -23,7 +23,7 @@ class DefaultHeader extends Component {
 
   const { loading } = this.state;
   const navigation = _nav;
-  const routes = _routes;
+  const routes = _routes.home;
 
   return (
     <div id="header">

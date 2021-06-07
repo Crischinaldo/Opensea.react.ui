@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import OpenSea from '../_opensea'
-import Logo from '../assets/images/logo_font.png'
+import Logo from '../assets/images/logo_font_black.png'
 
 import {
   Collapse,
@@ -47,7 +47,6 @@ class Navigation extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener("scroll", this.expand);
     
     const url = OpenSea.endpoints.collection.url + '?asset_owner=' + OpenSea.walletAddress;
     const options = {method: 'GET'};
@@ -89,41 +88,9 @@ class Navigation extends React.Component {
     this.setState({collapseOut: ""});
   }
 
-  setExpandFalse = () => {
-    this.setState({expand: ""});
-  }
-
-  setExpandTrue = () => {
-    this.setState({expand: "nav-expand-bottom"});
-  }
-
-  setExpandLogoFalse = () => {
-    this.setState({appLogo: "app-logo"});
-  }
-
-  setExpandLogoTrue = () => {
-    this.setState({appLogo: "app-logo-small"});
-  }
-
   setCollapseOut = () => {
     this.setState({collapseOut: ""});
   }
-
-  expand = () => {
-    if (
-      document.documentElement.scrollTop > 99 ||
-      document.body.scrollTop > 99
-    ) {
-      this.setExpandTrue();
-      this.setExpandLogoTrue();
-    } else if (
-      document.documentElement.scrollTop < 100 ||
-      document.body.scrollTop < 100
-    ) {
-      this.setExpandFalse();
-      this.setExpandLogoFalse();
-    }
-  };
 
   render() {
 
@@ -137,7 +104,7 @@ class Navigation extends React.Component {
 
     const toggle = () => this.setDropdownOpen(prevState => !prevState);
 
-    const navItems = this.props.config.homeItems.map((item, idx) =>
+    const navItems = this.props.config.nftItems.map((item, idx) =>
       <NavItem key={item.name}>
         {
           ! item.dropdown 
@@ -174,7 +141,7 @@ class Navigation extends React.Component {
 
     return (
       <Navbar
-        className={"fixed-top-under header-bottom " + this.state.expand}
+        className={"fixed-top-under header-bottom bg-white " + this.state.expand}
         color-on-scroll="100"
         expand="lg"
       >

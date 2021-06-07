@@ -1,5 +1,5 @@
 import React, { Component, Suspense } from 'react';
-import LoaderSpinner from '../../components/widgets/LoaderSpinner';
+import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
 import {
     NavItem,
     NavLink,
@@ -8,17 +8,13 @@ import {
     Row,
     Col
   } from "reactstrap";
-import _routes from '../../_routes';
+import _routes from '../../../_routes';
 import { Route, Switch } from 'react-router-dom';
-import _nav from '../../_nav';
-    
-// routes config
-//import routes from '../../routes';
-
-const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
-const DefaultHeader = React.lazy(() => import('./DefaultHeader'));
-
-class DefaultLayout extends Component {
+import _nav from '../../../_nav';
+const DefaultFooter = React.lazy(() => import('../default/DefaultFooter'));
+const NFTHeader = React.lazy(() => import('./NFTHeader'));
+   
+class NFTLayout extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -33,13 +29,13 @@ class DefaultLayout extends Component {
             <div className="app">
                 <div id="app-body">
                 <Suspense  fallback={LoaderSpinner(loading)}>
-                    <DefaultHeader/>
+                    <NFTHeader/>
                 </Suspense>
 
                 <main className="main">
                     <React.Suspense fallback={LoaderSpinner(loading)}>
                         <Switch>
-                            {_routes.map((route, idx) => {
+                            {_routes.nft.map((route, idx) => {
                             return route.component ? (
                                 <Route
                                 key={idx}
@@ -64,4 +60,4 @@ class DefaultLayout extends Component {
     }
 }
 
-export default DefaultLayout;
+export default NFTLayout;

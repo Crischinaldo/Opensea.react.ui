@@ -4,7 +4,7 @@ import './assets/css/styles.css';
 // import './App.scss';
 import React, { Component } from 'react';
 import LandingPage from './containers/pages/LandingPage';
-import DefaultLayout from './containers/layout/DefaultLayout';
+import DefaultLayout from './containers/layout/default/DefaultLayout';
 import { BrowserRouter} from 'react-router-dom';
 import LoaderSpinner from './components/widgets/LoaderSpinner';
 

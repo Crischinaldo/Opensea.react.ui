@@ -4,8 +4,8 @@ import {
   Nav,
   Container,
 } from "reactstrap";
-import SocialLinks from '../../components/SocialLinks';
-import _socialLinks from '../../_sociallinks';
+import SocialLinks from '../../../components/SocialLinks';
+import _socialLinks from '../../../_sociallinks';
 
 class HeaderTop extends React.Component {
   constructor(props) {

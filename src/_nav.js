@@ -1,35 +1,57 @@
 const navigation = {
-    items: [
-
+    homeItems: [
       {
-        route: '/seasons',
-        name: 'Seasons',
-        icon: '',
-        dropdown: true
-      },
-      {
-        route: '/collections',
+        route: '/#commissions',
         name: 'Commission',
         icon: '',
         dropdown: false
       },
+
+      {
+        route: '/#whoami',
+        name: 'About',
+        icon: '',
+        dropdown: false
+      },
+
       
       {
-        route: '/product',
+        route: '#product',
         name: 'Product',
         icon: '',
         dropdown: false
       },
 
       {
-        route: '/contact',
+        route: '/#contact',
         name: 'Contact',
         icon: '',
         dropdown: false
       },
       {
-        route: '/faq',
+        route: '/#faq',
         name: 'FAQ',
+        icon: '',
+        dropdown: false
+      },
+      {
+        route: '/nft',
+        name: 'NFT',
+        icon: '',
+        dropdown: false
+      },
+    ],
+    nftItems: [
+
+      {
+        route: '/nft/seasons',
+        name: 'Seasons',
+        icon: '',
+        dropdown: true
+      },
+      {
+        route: '/nft/assets',
+        name: 'Assets',
         icon: '',
         dropdown: false
       },

@@ -1,4 +1,6 @@
 import React, { useState , Component, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
+
 import {
   NavItem,
   NavLink,
@@ -20,7 +22,6 @@ import slideShow3 from '../assets/images/slideshow_3.jpg';
 import First from '../assets/images/nr1.png';
 import Second from '../assets/images/nr2.png';
 import Third from '../assets/images/nr3.png';
-import { useInView } from 'react-intersection-observer';
 
 
 // https://stackoverflow.com/questions/38093760/how-to-access-a-dom-element-in-react-what-is-the-equilvalent-of-document-getele - refs
@@ -38,8 +39,6 @@ const Product = (props) => {
 
   if (!(visible === "is-visible") && inView) {
     setVisible("is-visible");
-  } else {
-
   }
 
   const next = () => {
@@ -90,21 +89,24 @@ const Product = (props) => {
         key={item.src}
         className="caroussel-item"
       >
+      <div className="pl-md-5 embed-responsive embed-responsive-1by1">
         {item.format === 'image' 
-          ? <img className='media-size' src={media[item.idx]} alt={item.altText} />
-          : <video className='videoTag media-size' autoPlay loop muted>
+        
+          ? <img className='embed-responsive-item media-size' src={media[item.idx]} alt={item.altText} />
+          : <video className='sm landing-video embed-responsive-item' autoPlay loop muted>
               <source src={media[item.idx]} type='video/mp4' />
             </video>
         }
+        </div>
         <CarouselCaption/>
       </CarouselItem>
     );
   });
   return (
     <section ref={ref} className={"section component-transition section-l " + visible}>
+      <Container>
       <Row>
       <Col>
-      <Container>
         <Carousel
           activeIndex={activeIndex}
           next={next}
@@ -112,10 +114,8 @@ const Product = (props) => {
         >
           {slides}
         </Carousel>
-      </Container>
       </Col>
       <Col>
-      <Container>
       <div className="pl-md-3">
         <h2 className="text-magenta">
           What do i get, when i buy an <span className="font-weight-bold">NFT</span> from <span className="font-weight-bold">BrainXRain</span>
@@ -170,9 +170,9 @@ const Product = (props) => {
         </div>
       </div>
       </div>
-      </Container>
       </Col>
       </Row>
+      </Container>
     </section>
     );
   }
