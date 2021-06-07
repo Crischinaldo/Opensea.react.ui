@@ -7,14 +7,14 @@ const slideShow = [
       idx: 0
     },
     {
-      src: '../../assets/images/slideshow_2.jpg',
+      src: '../../assets/images/slideshow_2.png',
       altText: 'showcase certificate',
       caption: '2',
       format: 'image',
       idx: 1
     },
     {
-      src: '../../assets/images/slideshow_3.jpg',
+      src: '../../assets/images/slideshow_3.png',
       altText: 'showcase nft',
       caption: '3',
       format: 'image',

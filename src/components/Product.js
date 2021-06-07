@@ -17,8 +17,8 @@ import {
 } from "reactstrap";
 import slideShow from '../_slideshow';
 import slideShow1 from '../assets/videos/slideshow_1.mp4';
-import slideShow2 from '../assets/images/slideshow_2.jpg';
-import slideShow3 from '../assets/images/slideshow_3.jpg';
+import slideShow2 from '../assets/images/slideshow_2.png';
+import slideShow3 from '../assets/images/slideshow_3.png';
 import First from '../assets/images/nr1.png';
 import Second from '../assets/images/nr2.png';
 import Third from '../assets/images/nr3.png';
@@ -32,7 +32,7 @@ const Product = (props) => {
   });
 
   
-  const media = [slideShow1, slideShow3, slideShow2];
+  const media = [slideShow1, slideShow2, slideShow3];
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [visible, setVisible] = useState("is-not-visible");
@@ -117,10 +117,9 @@ const Product = (props) => {
       </Col>
       <Col>
       <div className="pl-md-3">
-        <h2 className="text-magenta">
+        <h2 className="text-magenta display-3">
           What do i get, when i buy an <span className="font-weight-bold">NFT</span> from <span className="font-weight-bold">BrainXRain</span>
         </h2>
-          <hr className="line-primary" />
         <p className="text-white"> When you buy an original art NFT from BrainXRain you will get the following items:
         </p>
         <div  className="what-do-i-get">
@@ -133,7 +132,7 @@ const Product = (props) => {
             alt="first subproduct"
             src={First}/>
           </Col>
-          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">An Animated MP4 file (1500x1800px) for your Blockchain</span></Col>
+          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">an animated mp4 file (1.500x1.800px) for your blockchain</span></Col>
 
         </Row>
 
@@ -146,7 +145,7 @@ const Product = (props) => {
             alt="second subproduct"
             src={Second}/>
             </Col>
-          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">A JPG picture of the full artwork</span></Col>
+          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">a printed version of the nft, framed in acryl glass</span></Col>
 
         </Row>
 
@@ -158,7 +157,7 @@ const Product = (props) => {
               alt="third subproduct"
               src={Third}/>
               </Col>
-          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">A printed version of the animated MP4 NFT framed in acryl glass</span></Col>
+          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">a high res jpg picture of the full artwork</span></Col>
 
         </Row>
 

@@ -6,7 +6,7 @@ import {
     Col,
     Button,
   } from "reactstrap";
-import slideShow1 from '../assets/videos/slideshow_1.mp4';
+import opening from '../assets/videos/opening.mp4';
 
 const Welcome = (props) => {
     
@@ -19,21 +19,20 @@ const Welcome = (props) => {
         <section className="section section-l welcome-section">
         <Container>
                 <Row className="row-grid justify-content">
-                <Col md="6">
-                    <div className="pl-md-5 embed-responsive embed-responsive-4by3">
+                <Col className="mt-3" md="6">
+                    <div className="pl-md-5 embed-responsive embed-responsive-16by9">
                     <video className='sm landing-video embed-responsive-item' autoPlay loop muted>
-                    <source src={slideShow1} type='video/mp4' />
+                    <source src={opening} type='video/mp4' />
                     </video>
                     </div>
                 </Col>
 
                 <Col className="col-7" md="5">
                     <div className="pl-md-8 mt-5">
-                    <h3 className="description text-white">
+                    <h2 className="text-magenta display-3">
                         Welcome to BrainXRain!
-                    </h3>
-                    <hr className="line-primary" />
-                    <p className="description">
+                    </h2>
+                    <p className="text-white">
                         We showcase art that you can buy with cryptocurrency. The animations which are shown on this platform and can also be found here (opensea.com/profile)
                     </p>
                     <br />

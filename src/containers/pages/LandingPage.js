@@ -38,19 +38,19 @@ const LandingPage = () => {
         
 
           <div className="wrapper">
-           <div className="about-me-image-wrapper"/>
+      
            <div className="welcome-section-background primary-border-bottom">
            <Suspense  fallback={LoaderSpinner(isLoading)}>
             <Welcome/>
+            </Suspense>
+            <Suspense  fallback={LoaderSpinner(isLoading)}>
+            <WhoAmI/>
             </Suspense>
             <Suspense  fallback={LoaderSpinner(isLoading)}>
             <Product/>
             </Suspense>
             <Suspense  fallback={LoaderSpinner(isLoading)}>
             <Commission/>
-            </Suspense>
-            <Suspense  fallback={LoaderSpinner(isLoading)}>
-            <WhoAmI/>
             </Suspense>
             <Suspense  fallback={LoaderSpinner(isLoading)}>
             <Faq/>

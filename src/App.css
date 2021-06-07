@@ -169,7 +169,6 @@ html {
 .welcome-section {
   z-index: 1000;
   margin-top: 5rem !important;
-  padding-bottom: 15rem !important;
 }
 
 .landing-video {
@@ -371,7 +370,7 @@ html {
 }
 
 .text-magenta {
-  color: #d80b71;
+  color: #e61873;
 }
 
 .active-product {
@@ -443,4 +442,25 @@ html {
 
 .show {
   z-index: 1024 !important;
+}
+
+.bg-transparent {
+  background-color:rgba(0, 0, 0, 0.0) !important;
+}
+
+.card-header svg {
+
+  color: #e61873;
+  display: inline-block;
+}
+
+.card-text-about-me {
+
+  margin-top: 1rem;
+
+  text-align: center;
+}
+
+.card {
+  text-align: center;
 }

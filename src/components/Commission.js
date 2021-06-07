@@ -29,13 +29,6 @@ import {
   CarouselIndicators,
   CarouselCaption
 } from "reactstrap";
-import slideShow from '../_slideshow';
-import slideShow1 from '../assets/videos/slideshow_1.mp4';
-import slideShow2 from '../assets/images/slideshow_2.jpg';
-import slideShow3 from '../assets/images/slideshow_3.jpg';
-import First from '../assets/images/nr1.png';
-import Second from '../assets/images/nr2.png';
-import Third from '../assets/images/nr3.png';
 import { useInView } from 'react-intersection-observer';
 
 
@@ -55,12 +48,12 @@ const Comission = (props) => {
   }
 
   return (
-    <section ref={ref} className={"section mt-0 component-transition section-l " + visible}>
+    <section ref={ref} className={"section component-transition section-l " + visible}>
       <Container>
       <Row className="row-grid justify-content-between align-items-center">
           <Col lg="6">
-            <h3 className="display-3 text-white">
-              You want a unique nft just for you?{" "}          </h3>
+            <h2 className="display-3 text-magenta">
+              You want a unique nft just for you?{" "}          </h2>
             <p className="text-white mb-3">
             You also have the option to order an <a
                   className="font-weight-bold text-info mt-5"

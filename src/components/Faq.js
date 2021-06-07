@@ -75,7 +75,7 @@ const FAQ = (props) => {
     };
 
     return (
-        <div ref={ref} className={"section mt-0 component-transition section-l " + visible}>
+        <div ref={ref} className={"section component-transition section-l " + visible}>
         <Container>
         <Faq
                 data={data}

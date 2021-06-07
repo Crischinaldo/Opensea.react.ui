@@ -1,4 +1,4 @@
-import * as icoMoon from 'react-icons-kit/icomoon';
+import * as fontAwesome from 'react-icons-kit/fa';
 import classnames from "classnames";
 import Icon from 'react-icons-kit';
 import {
@@ -10,6 +10,9 @@ import {
     Card,
     CardHeader,
     CardBody,
+    CardTitle,
+    CardText,
+    CardFooter,
     Nav,
     NavItem,
     NavLink,
@@ -34,84 +37,34 @@ const WhoAmI = (props) => {
     const [textTabs, setTextTabs] = React.useState(1);
 
     return (
-        <div ref={ref} className={"section mt-0 component-transition section-l " + visible}>
+        <div ref={ref} className={"section component-transition section-l " + visible}>
         <Container>
             <Row ml-auto mr-auto>
-              <Card>
-                <CardHeader>
-                  <Nav className="nav-tabs-primary" role="tablist" tabs>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: iconTabs === 1,
-                        })}
-                        onClick={(e) => setIconsTabs(1)}
-                        href="#aboutme"
-                      >
-                        <Icon icon={icoMoon['user']} />
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: iconTabs === 2,
-                        })}
-                        onClick={(e) => setIconsTabs(2)}
-                        href="#art"
-                      >
-                        <Icon icon={icoMoon['images']} />
-                       
-                      </NavLink>
-                    </NavItem>
-                    <NavItem>
-                      <NavLink
-                        className={classnames({
-                          active: iconTabs === 3,
-                        })}
-                        onClick={(e) => setIconsTabs(3)}
-                        href="#nft"
-                      >
-                        <Icon icon={icoMoon['cart']} />
+                <Col>
+            <Card  className='bg-transparent'>
+        <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['user']} /></CardHeader>
+        <CardBody>
+          <CardText  className="text-white card-text-about-me">i am a young artist from austria. I've been drawing for as long as I can remember and I love it.</CardText>
+        </CardBody>
+      </Card>
+      </Col>
+      <Col>
+      <Card  className='bg-transparent'>
+      <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['pencil']} /></CardHeader>
+        <CardBody>
+          <CardText className="text-white card-text-about-me">i like to deal with dark and profound topics. this is also reflected in my work. the asian tattoo scene and various comics have shaped my style.</CardText>
+        </CardBody>
+      </Card>
+      </Col>
+      <Col>
+      <Card  className='bg-transparent'>
+      <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['bitcoin']} /></CardHeader>
+        <CardBody>
+          <CardText className="text-white card-text-about-me">you have the chance to buy my artworks as an original and unique nft for your blockchain. every nft is limited to ONE piece only! Don't miss this chance.</CardText>
 
-                      </NavLink>
-                    </NavItem>
-                  </Nav>
-                </CardHeader>
-                <CardBody>
-                  <TabContent className="tab-space" activeTab={"link" + iconTabs}>
-                    <TabPane tabId="link1">
-                      <p>
-                        Collaboratively administrate empowered markets via
-                        plug-and-play networks. Dynamically procrastinate B2C
-                        users after installed base benefits. <br />
-                        <br />
-                        Dramatically visualize customer directed convergence
-                        without revolutionary ROI.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="link2">
-                      <p>
-                        Completely synergize resource taxing relationships via
-                        premier niche markets. Professionally cultivate one-to-one
-                        customer service with robust ideas. <br />
-                        <br />
-                        Dynamically innovate resource-leveling customer service
-                        for state of the art customer service.
-                      </p>
-                    </TabPane>
-                    <TabPane tabId="link3">
-                      <p>
-                        Efficiently unleash cross-media information without
-                        cross-media value. Quickly maximize timely deliverables
-                        for real-time schemas. <br />
-                        <br />
-                        Dramatically maintain clicks-and-mortar solutions without
-                        functional solutions.
-                      </p>
-                    </TabPane>
-                  </TabContent>
-                </CardBody>
-              </Card>
+        </CardBody>
+      </Card>
+      </Col>
               </Row>
         </Container>
       </div>

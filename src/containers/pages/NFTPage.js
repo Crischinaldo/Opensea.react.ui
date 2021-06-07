@@ -30,7 +30,7 @@ const NFTPage = () => {
             <NFTHeader/>
          </Suspense>
           <div className="wrapper">
-          <section className="section mt-0 section-l bg-dark-blue welcome-section">
+          <section className="section section-l bg-dark-blue welcome-section">
             <Container>
                
             </Container>
