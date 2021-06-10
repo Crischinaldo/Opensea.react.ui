@@ -373,6 +373,10 @@ html {
   color: #e61873;
 }
 
+.bg-darker-magenta {
+  background-color: #580231;
+}
+
 .active-product {
   padding:0 !important;
 }
@@ -394,6 +398,18 @@ html {
 
 .component-transition {
   transition: all 1s ease;
+}
+
+.component-transition-1 {
+  transition: all 1s ease;
+}
+
+.component-transition-1-5 {
+  transition: all 1.5s ease;
+}
+
+.component-transition-2 {
+  transition: all 2s ease;
 }
 
 .is-visible {
@@ -463,4 +479,32 @@ html {
 
 .card {
   text-align: center;
+}
+
+.card-min-height {
+  min-height: 15rem;
+}
+
+.card-landing {
+  box-shadow: -2px 0px 6px -2px rgb(0 0 0 / 50%);
+}
+
+.card-landing:hover {
+  transform: translateY(-2px);
+  box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
+  transition: all 0.1s ease 0s;
+}
+
+.btn, .navbar .navbar-nav > a.btn {
+  float: right;
+}
+
+.btn-magenta {
+  background-color: #e61873 !important;
+  background: #e61873 !important;
+}
+
+
+.bg-bright-magenta {
+  background-color: #e61873;
 }

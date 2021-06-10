@@ -163,8 +163,8 @@ const Product = (props) => {
         </Row>
 
         <br />
-        <div className="btn-wrapper mb-3">
-          <Button className="btn-round" color="primary" type="button">
+        <div className="btn-wrapper float-start">
+          <Button className="btn-round" color="magenta" type="button">
               Show More
           </Button>
         </div>

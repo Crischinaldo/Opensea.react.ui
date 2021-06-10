@@ -137,7 +137,7 @@ const Comission = (props) => {
                 </Form>
               </CardBody>
               <CardFooter>
-                <Button className="btn-round" color="primary" size="lg">
+                <Button className="btn-round" color="magenta" size="lg">
                   Send Wish
                 </Button>
               </CardFooter>

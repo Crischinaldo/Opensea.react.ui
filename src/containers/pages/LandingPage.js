@@ -38,8 +38,10 @@ const LandingPage = () => {
         
 
           <div className="wrapper">
-      
-           <div className="welcome-section-background primary-border-bottom">
+
+          <Suspense  fallback={LoaderSpinner(isLoading)}>
+            <div className="welcome-section-background primary-border-bottom">
+           
            <Suspense  fallback={LoaderSpinner(isLoading)}>
             <Welcome/>
             </Suspense>
@@ -56,11 +58,12 @@ const LandingPage = () => {
             <Faq/>
             </Suspense>
             </div>
-          </div>
+          </Suspense>
 
       <Suspense  fallback={LoaderSpinner(isLoading)}>
         <DefaultFooter/>
       </Suspense>
+      </div>
     </>
     );
 }

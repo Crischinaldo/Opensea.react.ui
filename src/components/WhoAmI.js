@@ -37,11 +37,11 @@ const WhoAmI = (props) => {
     const [textTabs, setTextTabs] = React.useState(1);
 
     return (
-        <div ref={ref} className={"section component-transition section-l " + visible}>
+        <div ref={ref} className={"section section-l"}>
         <Container>
             <Row ml-auto mr-auto>
                 <Col>
-            <Card  className='bg-transparent'>
+            <Card  className={'bg-bright-magenta card-min-height component-transition-1 card-landing ' + visible}>
         <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['user']} /></CardHeader>
         <CardBody>
           <CardText  className="text-white card-text-about-me">i am a young artist from austria. I've been drawing for as long as I can remember and I love it.</CardText>
@@ -49,7 +49,7 @@ const WhoAmI = (props) => {
       </Card>
       </Col>
       <Col>
-      <Card  className='bg-transparent'>
+      <Card  className={'bg-bright-magenta card-min-height component-transition-1-5 card-landing ' + visible}>
       <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['pencil']} /></CardHeader>
         <CardBody>
           <CardText className="text-white card-text-about-me">i like to deal with dark and profound topics. this is also reflected in my work. the asian tattoo scene and various comics have shaped my style.</CardText>
@@ -57,7 +57,7 @@ const WhoAmI = (props) => {
       </Card>
       </Col>
       <Col>
-      <Card  className='bg-transparent'>
+      <Card  className={'bg-magenta card-min-height component-transition-2 card-landing ' + visible}>
       <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['bitcoin']} /></CardHeader>
         <CardBody>
           <CardText className="text-white card-text-about-me">you have the chance to buy my artworks as an original and unique nft for your blockchain. every nft is limited to ONE piece only! Don't miss this chance.</CardText>

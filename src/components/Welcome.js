@@ -41,8 +41,8 @@ const Welcome = (props) => {
                     </p>
                     <br />
                     <div className="btn-wrapper mb-3">
-                    <Button onClick={() => { window.location.href='/nft'}} className="btn-round btn-nft" color="primary" type="button">
-                        Show Animations
+                    <Button onClick={() => { window.location.href='/nft'}} className="btn-round btn-nft" color="magenta" type="button">
+                        Play Video
                     </Button>
                 </div>
                     </div>
