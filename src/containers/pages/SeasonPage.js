@@ -9,7 +9,6 @@ import {
   Button
 } from "reactstrap";
 import OpenSea from '../../_opensea';
-import Gallery from '../wrapper/Gallery';
 import LoaderSpinner from '../../components/widgets/LoaderSpinner'
 
 class SeasonPage extends Component {
@@ -81,7 +80,7 @@ class SeasonPage extends Component {
                 <section className="section fade-in">
                 <Container>
                     <React.Suspense fallback={LoaderSpinner(loading)}>
-                        <Gallery assets={this.state.assets}/>
+                        
                     </React.Suspense>
                 </Container>
             </section>
