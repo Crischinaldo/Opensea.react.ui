@@ -44,7 +44,11 @@
   transition: all 0.1s ease 0s;
   z-index: 2;
   margin-left: 50%;
-  margin-top: 30%;
+  margin-top: 20%;
+}
+
+.nft-wrapper {
+  background-color: white !important;
 }
 
 .rounded {
@@ -207,6 +211,21 @@ html {
     max-height: 100%;
 }
 
+.asset-image-outer-wrapper {
+  display: block;
+  padding: 8px;
+}
+
+.asset-image-inner-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(229, 232, 235);
+  border-radius: 5px;
+  position: relative;
+
+}
+
 .image-outer-wrapper:hover {
   transform: translateY(-2px);
   box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
@@ -301,13 +320,16 @@ html {
   transition: all 0.1s ease 0s;
 }
 
+.season-small-outer-wrapper {
+  width: 20rem;
+}
+
 .season-small-inner-wrapper {
   height: 100%;
   background-color: rgb(255, 255, 255);
   border: 1px solid rgb(229, 232, 235);
   border-radius: 5px;
   position: relative;
-  width: 315px;
 }
 
 .season-small-anchor {
@@ -613,7 +635,7 @@ html {
 }
 
 .footer {
-      padding: 30px 0;
+  padding: 30px 0;
 }
 
 .footer .nav {
@@ -632,4 +654,131 @@ html {
 
 .nft-overview {
   background-color: rgb(251, 253, 255);
+}
+
+.text-purple {
+  color: #6603ad;
+}
+
+.nft-footer {
+  border-top: 1px solid rgb(229, 232, 235) !important;
+  box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
+
+  border-top: 2px solid #fd5d93 !important;
+  background: #2d2f30;
+  padding: 30px 0;
+  
+}
+
+
+.nft-footer .nav {
+  padding-top: 0 !important;
+  display: block;
+  float: left;
+  margin-bottom: 0;
+  padding-top: 25px;
+  list-style: none;
+
+}
+
+.nft-footer .nav-link {
+  color: black;
+  padding: 10px 0;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.page-min-height {
+  min-height: 100vh;
+}
+
+
+.eth-logo {
+  width: 12px;
+  height: 12px;
+}
+
+.asset-description {
+  font-size: 0.6rem;
+  color:rgba(22, 56, 53, 0.527);;
+}
+
+
+.item--media-frame .item--media {
+  cursor: pointer;
+  max-height: 1000px;
+  width: 100%;
+  min-height: 500px;
+}
+
+.media-outer-wrapper {
+  border-radius: 5px;
+  border: 1px solid rgb(229, 232, 235);
+  overflow: hidden;
+}
+
+.item--summary {
+  flex: 3 0 0%;
+  flex-grow: 3;
+  flex-shrink: 0;
+  flex-basis: 0%;
+  max-width: 43%;
+  width: 0px;
+}
+
+.item--flex { 
+  -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    min-height: inherit;
+    width: 100%;
+    border-radius: inherit;
+}
+
+.item--image {
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.item--image-img {
+  object-fit: contain;
+  transition: opacity 400ms ease 0s;
+}
+
+.item--info-color {
+  color: rgb(112, 122, 131);
+  font-size: 1.5rem;
+}
+
+.trade--main{
+  background-color: rgb(251, 253, 255);
+    padding: 12px;
+}
+
+.trade--main .trade--label {
+  color: rgb(112, 122, 131);
+}
+
+.trade--main .trade--price-container {
+  display: flex;
+  margin-bottom: 5px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+
+.eth-logo-big {
+  
+  width: 24px;
+  height: 24px;
 }

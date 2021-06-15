@@ -29,7 +29,7 @@ const navigation = {
         dropdown: false
       },
       {
-        route: '/nft',
+        route: '/marketplace/assets',
         name: 'NFT',
         icon: '',
         dropdown: false
@@ -38,14 +38,14 @@ const navigation = {
     nftItems: [
 
       {
-        route: '/nft/seasons',
+        route: '/marketplace/seasons',
         name: 'Seasons',
         icon: '',
-        dropdown: true
+        dropdown: false
       },
       {
-        route: '/nft/assets',
-        name: 'Assets',
+        route: '/marketplace/assets',
+        name: 'Gallery',
         icon: '',
         dropdown: false
       },

@@ -1,4 +1,3 @@
-
 import React from "react";
 // reactstrap components
 import {
@@ -14,10 +13,10 @@ import { HashLink as Link } from 'react-router-hash-link';
 //import Logo from '../../../assets/images/logo_font.png';
 import Logo from '../../../assets/images/logo_font_black.png';
 
-class DefaultFooter extends React.Component {
+class NFTFooter extends React.Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="bg-white nft-footer">
         <Container>
         <Row className="row-grid flex-row">
             <Col md="4">
@@ -37,15 +36,15 @@ class DefaultFooter extends React.Component {
             </NavbarBrand>
           </div>
             <div className="brainxrain-desc">
-            <p className="text-white font-size-footer">
+            <p className="text-black font-size-footer">
             BrainXRain is a place where you can buy digital assets along with a physical NFT for crypto currency.
             </p>
             </div>
 
             </Col>
             <Col md="2" className="ml-5">
-              <Nav className="text-white">
-                <h4 className="text-white">Resources</h4>
+              <Nav>
+                <h4 className="text-black">Resources</h4>
                 <NavItem>
                   <NavLink to="/#about" tag={Link}>
                     About
@@ -70,7 +69,7 @@ class DefaultFooter extends React.Component {
             </Col>
             <Col  md="2">
               <Nav>
-              <h4 className="text-white">NFT</h4>
+              <h4 className="text-black">NFT</h4>
                 <NavItem>
                   <NavLink to="/nft" tag={Link}>
                    Overview
@@ -86,7 +85,7 @@ class DefaultFooter extends React.Component {
 
             <Col md="2">
               <Nav>
-              <h4 className="text-white">General</h4>
+              <h4 className="text-black">General</h4>
                 <NavItem>
                   <NavLink to="/imprint" tag={Link}>
                    imprint
@@ -106,4 +105,4 @@ class DefaultFooter extends React.Component {
   }
 }
 
-export default DefaultFooter;
+export default NFTFooter;

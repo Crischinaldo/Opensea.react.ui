@@ -7,7 +7,7 @@ import {
 import LoaderSpinner from '../../components/widgets/LoaderSpinner';
 import Overview from '../../components/Overview';
 
-const DefaultFooter = React.lazy(() => import('../layout/default/DefaultFooter'));
+const NFTFooter = React.lazy(() => import('../layout/marketplace/NFTFooter'));
 const NFTHeader = React.lazy(() => import('../layout/marketplace/NFTHeader'));
 
 class NFTPage extends React.Component {
@@ -24,18 +24,7 @@ class NFTPage extends React.Component {
 
         return (
           <>
-          <Suspense  fallback={LoaderSpinner(loading)}>
-              <NFTHeader/>
-          </Suspense>
-            <div className="wrapper">
-            <section className="mt-0 nft-overview section section-l">
-              <Container>
-              <Suspense  fallback={LoaderSpinner(this.state.loading)}>
-                <Overview />
-             </Suspense>
-              </Container>
-              </section>
-            </div>
+          
           </>
       );
       }

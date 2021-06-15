@@ -1,5 +1,4 @@
 import React, { useState , Component, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 import { RotateSpinner } from "react-spinners-kit";
 import {
   Container,
@@ -31,7 +30,8 @@ const SeasonOverview = (props) => {
     
    const url = OpenSea.endpoints.collection.url
    + '?owner=' + OpenSea.walletAddress
-   + '&asset_contract_address=' + OpenSea.contractAddress;
+   + '&asset_contract_address=' + OpenSea.contractAddress
+   + 'offset=5';
 
 
    const _collections = [];
@@ -50,25 +50,25 @@ const SeasonOverview = (props) => {
              
                });
              })
-            setCollections(_collections);
-            setLoading(false);
             })
-     }
-     , []);
+      
+      .then( () => {
+        setCollections(_collections);
+        setLoading(false);
+      })
+     }, []);
   
   const renderedCollections = collections.map((collection) => {
-
-    console.log("test");
-    console.log(collection);
     return (
-      <Col>
-        <SeasonCard 
+        <div className="m-3">
+        <SeasonCard    
           image={collection.image} 
           description={collection.description} 
           name={collection.name} 
           slug={collection.slug} 
         />
-      </Col>
+        </div>
+      
     )
   });
   
@@ -80,19 +80,13 @@ const SeasonOverview = (props) => {
         {isLoading 
           ? <LoaderSpinner/>
           :  <Container>
-                <div className="collections d-flex">
+              
               <h1 className="text-black">Seasons</h1>
               <Row>
+              <div className="collections d-flex flex-wrap p-2 align-items-left">
                 {renderedCollections}
-              </Row> 
-              <Row>
-              <div className="btn-wrapper">
-              <Button className="btn-round btn-overview-seasons" color="magenta" type="button">
-                Show More
-              </Button>
-            </div>
+                </div>
               </Row>
-              </div>
              </Container>
         }
     </>

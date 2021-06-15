@@ -8,8 +8,9 @@ const Faq = React.lazy(() => import('./components/Faq'));
 
 const NFTPage = React.lazy(() => import('./containers/pages/NFTPage'));
 const SeasonPage = React.lazy(() => import('./containers/pages/SeasonPage'));
-const SeasonsPage = React.lazy(() => import('./containers/pages/SeasonsPage'));
 const AssetPage = React.lazy(() => import('./containers/pages/AssetPage'));
+const AssetsPage = React.lazy(() => import('./containers/pages/AssetsPage'));
+const SeasonsPage = React.lazy(() => import('./containers/pages/SeasonsPage'));
 
 
 const _routes = [
@@ -18,11 +19,11 @@ const _routes = [
     { path: '/#commission', name: 'Commission', component: Commission, context: 'home', hash: true},
     { path: '/#about', name: 'About', component: WhoAmI, context: 'home', hash: true},
     { path: '/#faq', name: 'FAQ', component: Faq, context: 'home', hash: true},
-    { path: '/nft', name: 'NFT', component: NFTPage, context: 'home', hash: false},
+    { path: '/marketplace/assets', name: 'NFT', component: AssetsPage, context: 'NFT', hash: false},
     { path: '/', exact: true, name: 'Home', component: LandingPage, context:'NFT', hash: false},
-    { path: '/seasons/:season_name', name: 'Season', component: SeasonPage, context:'NFT', hash:false},
-    { path: '/seasons', name: 'Seasons', component: SeasonsPage, context:'NFT', hash: false},
-    { path: '/asset/:contract_id/:asset_id', name: 'Asset', component: AssetPage, context:'NFT', hash:false}
+    { path: '/marketplace/seasons/:season_name', name: 'Season', component: SeasonPage, context:'NFT', hash:false},
+    { path: '/marketplace/seasons', name: 'Seasons', component: SeasonsPage, context:'NFT', hash: false},
+    { path: '/marketplace/asset/:contract_id/:asset_id', name: 'Asset', component: AssetPage, context:'NFT', hash:false}
   ]
   
 

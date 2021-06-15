@@ -13,8 +13,8 @@ const SeasonCard = (props) => {
             </div>
             </header>
             
-                <div class="season-small-content">
-                    <div class="season-small-content-asset pl-md-5 embed-responsive embed-responsive-16by9">
+                <div className="season-small-content">
+                    <div className="season-small-content-asset pl-md-5 embed-responsive embed-responsive-16by9">
                         <img
                         className='embed-responsive-item'
                         top 

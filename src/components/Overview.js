@@ -13,16 +13,18 @@ import MediaOverview from './MediaOverview';
 const Overview = (props) => {
 
   return (
-    
+    <>
     <section className="section mt-0">
       <Container>
         <SeasonOverview />
       </Container>
+      </section>
+      <section className="section mt-0">
       <Container>
         <MediaOverview />
-    
       </Container>
-    </section>
+      </section>
+    </>
     );
   }
 
