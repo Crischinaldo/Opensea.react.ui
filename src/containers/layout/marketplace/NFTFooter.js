@@ -71,12 +71,12 @@ class NFTFooter extends React.Component {
               <Nav>
               <h4 className="text-black">NFT</h4>
                 <NavItem>
-                  <NavLink to="/nft" tag={Link}>
-                   Overview
+                <NavLink to="/marketplace/assets" tag={Link}>
+                   Assets
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/seasons" tag={Link}>
+                  <NavLink to="/marketplace/seasons" tag={Link}>
                    Seasons
                   </NavLink>
                 </NavItem>
