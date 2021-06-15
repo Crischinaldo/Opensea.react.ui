@@ -48,7 +48,7 @@ const Comission = (props) => {
   }
 
   return (
-    <section ref={ref} className={"section component-transition section-l " + visible}>
+    <section id="commission" ref={ref} className={"section component-transition section-l " + visible}>
       <Container>
       <Row className="row-grid justify-content-between align-items-center">
           <Col lg="6">

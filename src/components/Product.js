@@ -104,7 +104,7 @@ const Product = (props) => {
     );
   });
   return (
-    <section ref={ref} className={"section component-transition section-l " + visible}>
+    <section id="product" ref={ref} className={"section component-transition section-l " + visible}>
       <Container>
       <Row>
       <Col md="6">
@@ -164,7 +164,7 @@ const Product = (props) => {
 
         <br />
         <div className="btn-wrapper float-start">
-          <Button className="btn-round" color="magenta" type="button">
+          <Button className="btn-round btn-product" color="magenta" type="button">
               Show More
           </Button>
         </div>

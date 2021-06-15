@@ -1,14 +1,8 @@
 const navigation = {
     homeItems: [
-      {
-        route: '/#commissions',
-        name: 'Commission',
-        icon: '',
-        dropdown: false
-      },
 
       {
-        route: '/#whoami',
+        route: '/#about',
         name: 'About',
         icon: '',
         dropdown: false
@@ -23,8 +17,8 @@ const navigation = {
       },
 
       {
-        route: '/#contact',
-        name: 'Contact',
+        route: '/#commission',
+        name: 'Commission',
         icon: '',
         dropdown: false
       },

@@ -141,7 +141,7 @@ class Navigation extends React.Component {
 
     return (
       <Navbar
-        className={"fixed-top-under header-bottom bg-white " + this.state.expand}
+        className={"fixed-top-under header-bottom bg-white nft-header"}
         color-on-scroll="100"
         expand="lg"
       >

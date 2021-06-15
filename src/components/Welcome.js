@@ -1,5 +1,5 @@
 
-import React  from 'react';
+import React, { useState }  from 'react';
 import {
     Container,
     Row,
@@ -9,10 +9,8 @@ import {
 import opening from '../assets/videos/opening.mp4';
 import ReactPlayer from 'react-player'
 const Welcome = (props) => {
-    
-    const handleClick = (e) => {
-        window.location.href='/nft';
-    };
+
+    const [isPlaying, setIsPlaying] = useState(false);
 
     return (
        
@@ -21,12 +19,13 @@ const Welcome = (props) => {
                 <Row className="row-grid justify-content">
                 <Col className="mt-3" md="6">
                 <div className="pl-md-5 embed-responsive embed-responsive-16by9">
-                        <ReactPlayer
+                        <ReactPlayer 
                 className='react-player fixed-bottom embed-responsive-item'
                 url={opening}
                 width='100%'
                 height='100%'
                 controls = {true}
+                playing= {isPlaying}
 
                 />
                 </div>
@@ -41,7 +40,7 @@ const Welcome = (props) => {
                     </p>
                     <br />
                     <div className="btn-wrapper mb-3">
-                    <Button onClick={() => { window.location.href='/nft'}} className="btn-round btn-nft" color="magenta" type="button">
+                    <Button onClick={() => { setIsPlaying(true)}} className="btn-round btn-nft" color="magenta" type="button">
                         Play Video
                     </Button>
                 </div>

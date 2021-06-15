@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import OpenSea from '../_opensea'
 import Logo from '../assets/images/logo_font.png'
-
+import { HashLink as Link } from 'react-router-hash-link';
 import {
   Collapse,
   NavbarBrand,
@@ -20,7 +20,6 @@ import {
 class Navigation extends React.Component {
   constructor(props) {
     super(props);
-    this.handleMouseHover = this.handleMouseHover.bind(this);
     this.state = {
       collapseOpen: false,
       collapseOut: "",
@@ -35,16 +34,6 @@ class Navigation extends React.Component {
     this.setState({dropDownOpen: open})
   }
   
-
-  handleMouseHover() {
-    this.setState(this.toggleHoverState);
-  }
-
-  toggleHoverState(state) {
-    return {
-      isHovering: !state.isHovering,
-    };
-  }
 
   componentDidMount() {
     window.addEventListener("scroll", this.expand);
@@ -135,8 +124,6 @@ class Navigation extends React.Component {
       this.setCollapseOut("");
     };
 
-    const toggle = () => this.setDropdownOpen(prevState => !prevState);
-
     const navItems = this.props.config.homeItems.map((item, idx) =>
       <NavItem key={item.name}>
         {
@@ -146,8 +133,6 @@ class Navigation extends React.Component {
             </NavLink>
           :  <UncontrolledDropdown nav>
           <DropdownToggle
-            onMouseEnter={toggle}
-            onMouseLeave={toggle}
             isOpen={this.dropdownOpen} 
             className="header-nav-item"
             caret

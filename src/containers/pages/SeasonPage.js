@@ -73,7 +73,7 @@ class SeasonPage extends Component {
             this.fetchAssets();
         }
 
-        const { loading } = this.state;
+        const { loading } = this.state.loading;
 
         return (
             <div className="wrapper">

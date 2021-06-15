@@ -13,16 +13,16 @@ const AssetPage = React.lazy(() => import('./containers/pages/AssetPage'));
 
 
 const _routes = [
-    { path: '/', exact: true, name: 'Home', component: LandingPage, context: 'home'},
-    { path: '/#product', name: 'Product', component: Product, context: 'home'},
-    { path: '/#contact', name: 'Contact', component: Commission, context: 'home'},
-    { path: '/#whoami', name: 'Contact', component: WhoAmI, context: 'home'},
-    { path: '/#faq', name: 'FAQ', component: Faq, context: 'home'},
-    { path: '/nft', name: 'NFT', component: NFTPage, context: 'home'},
-    { path: '/', exact: true, name: 'Home', component: LandingPage, context:'NFT'},
-    { path: '/seasons/:season_name', name: 'Season', component: SeasonPage, context:'NFT'},
-    { path: '/seasons', name: 'Seasons', component: SeasonsPage, context:'NFT' },
-    { path: '/asset/:contract_id/:asset_id', name: 'Asset', component: AssetPage, context:'NFT'}
+    { path: '/', exact: true, name: 'Home', component: LandingPage, context: 'home', hash: false},
+    { path: '/#product', name: 'Product', component: Product, context: 'home', hash: true},
+    { path: '/#commission', name: 'Commission', component: Commission, context: 'home', hash: true},
+    { path: '/#about', name: 'About', component: WhoAmI, context: 'home', hash: true},
+    { path: '/#faq', name: 'FAQ', component: Faq, context: 'home', hash: true},
+    { path: '/nft', name: 'NFT', component: NFTPage, context: 'home', hash: false},
+    { path: '/', exact: true, name: 'Home', component: LandingPage, context:'NFT', hash: false},
+    { path: '/seasons/:season_name', name: 'Season', component: SeasonPage, context:'NFT', hash:false},
+    { path: '/seasons', name: 'Seasons', component: SeasonsPage, context:'NFT', hash: false},
+    { path: '/asset/:contract_id/:asset_id', name: 'Asset', component: AssetPage, context:'NFT', hash:false}
   ]
   
 

@@ -18,7 +18,7 @@ import React, { useState , Component, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { user } from 'react-icons-kit/icomoon';
 
-import Faq from "react-faq-component";
+import Faq from 'react-faq-component';
 
 const FAQ = (props) => {
 
@@ -36,7 +36,7 @@ const FAQ = (props) => {
     const [textTabs, setTextTabs] = React.useState(1);
 
     const data = {
-        title: "General Information",
+    
         rows: [
             {
                 title: "What is an NFT?",
@@ -60,12 +60,11 @@ const FAQ = (props) => {
     };
     
     const styles = {
-        // bgColor: 'white',
-        titleTextColor: "#ffffffcc",
-        rowTitleColor: "#ffffffcc",
-        bgColor: "#580231"
-        // rowContentColor: 'grey',
-        // arrowColor: "red",
+        bgColor: 'transparent',
+        titleTextColor: "white",
+        rowTitleColor: "#e61873",
+        rowContentColor: 'white',
+        arrowColor: "#580231",
     };
     
     const config = {
@@ -75,7 +74,7 @@ const FAQ = (props) => {
     };
 
     return (
-        <div ref={ref} className={"section component-transition section-l " + visible}>
+        <div id="faq" ref={ref} className={"section faq-section component-transition section-l " + visible}>
         <Container>
         <Faq
                 data={data}

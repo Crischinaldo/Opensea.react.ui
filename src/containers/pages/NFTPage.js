@@ -1,47 +1,44 @@
-import React, { Component, useEffect, Suspense, useState } from 'react';
+import React, {Suspense} from 'react';
 import {
-  NavItem,
-  NavLink,
-  Nav,
+
   Container,
-  Row,
-  Col,
-  Button,
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
 } from "reactstrap";
 
 import LoaderSpinner from '../../components/widgets/LoaderSpinner';
-
-
-import slideShow1 from '../../assets/videos/slideshow_1.mp4';
+import Overview from '../../components/Overview';
 
 const DefaultFooter = React.lazy(() => import('../layout/default/DefaultFooter'));
 const NFTHeader = React.lazy(() => import('../layout/marketplace/NFTHeader'));
 
-const NFTPage = () => {
-    const [isLoading, setLoading] = useState(true);
+class NFTPage extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: true,
+    };
 
-    return (<>
-        <Suspense  fallback={LoaderSpinner(isLoading)}>
-            <NFTHeader/>
-         </Suspense>
-          <div className="wrapper">
-          <section className="section section-l bg-dark-blue welcome-section">
-            <Container>
-               
-            </Container>
-            </section>
-          </div>
+  }
 
-        <Suspense  fallback={LoaderSpinner(isLoading)}>
-            <DefaultFooter/>
-        </Suspense>
-        </>
-    );
+    render() {
+        const loading = this.state.loading;
+
+        return (
+          <>
+          <Suspense  fallback={LoaderSpinner(loading)}>
+              <NFTHeader/>
+          </Suspense>
+            <div className="wrapper">
+            <section className="mt-0 nft-overview section section-l">
+              <Container>
+              <Suspense  fallback={LoaderSpinner(this.state.loading)}>
+                <Overview />
+             </Suspense>
+              </Container>
+              </section>
+            </div>
+          </>
+      );
+      }
 }
 
 
