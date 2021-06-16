@@ -14,187 +14,112 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownItem,
-  DropdownMenu
+  DropdownMenu,
+  Col,
+  Row,
+  NavbarToggler
 } from "reactstrap";
 
-class Navigation extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      collapseOpen: false,
-      collapseOut: "",
-      expand: "",
-      appLogo: "app-logo",
-      seasons: [],
-      dropdownOpen: true,
+const Navigation = (props) => {
+
+
+  const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [collapseOut, setCollapseOut] = React.useState("");
+  const [expand, setExpand] = React.useState("");
+  const [expandLogo, setExpandLogo] = React.useState("app-logo");
+
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", expandNav);
+    return function cleanup() {
+      window.removeEventListener("scroll", expandNav);
     };
-  }
+  },[]);
 
-  setDropdownOpen(open) {
-    this.setState({dropDownOpen: open})
-  }
-  
 
-  componentDidMount() {
-    window.addEventListener("scroll", this.expand);
-    
-    const url = OpenSea.endpoints.collection.url + '?asset_owner=' + OpenSea.walletAddress;
-    const options = {method: 'GET'};
-
-    fetch(url, options)
-    .then(res => res.json())
-    .then(json => 
-      {
-        const seasons = [];
-
-        json.forEach((collection, idx) => { 
-          seasons.push(collection.slug);
-        })
-        this.setState({ seasons: [...this.state.seasons, ...seasons] }) 
-      })
-    .catch(err => console.error('error:' + err));
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.expand);
-  }
-
-  onCollapseExiting = () => {
-    this.setState({
-      collapseOut: "collapsing-out"
-    });
-  };
-  onCollapseExited = () => {
-    this.setState({
-      collapseOut: ""
-    });
+  const toggleCollapse = () => {
+    document.documentElement.classList.toggle("nav-open");
+    setCollapseOpen(!collapseOpen);
   };
 
-  setCollapseOpen = () => {
-    this.setState({collapseOpen: false});
-  }
+  const onCollapseExiting = () => {
+    setCollapseOut("collapsing-out");
+  };
+  const onCollapseExited = () => {
+    setCollapseOut("");
+  };
 
-  setCollapseOut = () => {
-    this.setState({collapseOut: ""});
-  }
-
-  setExpandFalse = () => {
-    this.setState({expand: ""});
-  }
-
-  setExpandTrue = () => {
-    this.setState({expand: "nav-expand-bottom"});
-  }
-
-  setExpandLogoFalse = () => {
-    this.setState({appLogo: "app-logo"});
-  }
-
-  setExpandLogoTrue = () => {
-    this.setState({appLogo: "app-logo-small"});
-  }
-
-  setCollapseOut = () => {
-    this.setState({collapseOut: ""});
-  }
-
-  expand = () => {
+  const expandNav = () => {
     if (
       document.documentElement.scrollTop > 99 ||
       document.body.scrollTop > 99
     ) {
-      this.setExpandTrue();
-      this.setExpandLogoTrue();
+      setExpand("nav-expand-bottom");
+      setExpandLogo("app-logo-small");
     } else if (
       document.documentElement.scrollTop < 100 ||
       document.body.scrollTop < 100
     ) {
-      this.setExpandFalse();
-      this.setExpandLogoFalse();
+      setExpand("");
+      setExpandLogo("app-logo");
     }
   };
 
-  render() {
+ 
 
-    const onCollapseExiting = () => {
-      this.setCollapseOut("collapsing-out");
-    };
+  const navItems = props.config.homeItems.map((item, idx) =>
+    <NavItem key={item.name}>
+      {
+       
+        <NavLink tag={Link} to={item.route} className="header-nav-item">
+          {item.name}
+          </NavLink>
+      }
+      </NavItem>
+  );
 
-    const onCollapseExited = () => {
-      this.setCollapseOut("");
-    };
-
-    const navItems = this.props.config.homeItems.map((item, idx) =>
-      <NavItem key={item.name}>
-        {
-          ! item.dropdown 
-          ? <NavLink tag={Link} to={item.route} className="header-nav-item">
-            {item.name}
-            </NavLink>
-          :  <UncontrolledDropdown nav>
-          <DropdownToggle
-            isOpen={this.dropdownOpen} 
-            className="header-nav-item"
-            caret
-            color="default"
-            data-toggle="dropdown"
-            href="seasons"
-            nav
-            onClick={(e) => e.preventDefault()}
+  return (
+    <Navbar
+      className={"fixed-top-under header-bottom " + expand}
+      color-on-scroll="100"
+      expand="lg"
+    >
+      <Container>
+      <div className="navbar-translate header-logo" id={expandLogo}>
+          <NavbarBrand
+            data-placement="bottom"
+            to="/"
+            rel="noopener noreferrer"
+            tag={Link}
           >
-            <i className="fa fa-cogs d-lg-none d-xl-none" />
-            {item.name}
-          </DropdownToggle>
-          <DropdownMenu className="dropdown">
-          {this.state.seasons.reverse().map((season, i) =>
-            <DropdownItem tag={Link} to={"/seasons/" + season}>
-              {season}
-            </DropdownItem>
-          )}
-          </DropdownMenu>
-        </UncontrolledDropdown>
-        }
-        </NavItem>
-    );
+            <img
+              src={Logo}
+              width="50%"
+              height="50%"
+              alt="brainxrain logo"
+              />
+          </NavbarBrand>
+        </div>
 
-    return (
-      <Navbar
-        className={"fixed-top-under header-bottom " + this.state.expand}
-        color-on-scroll="100"
-        expand="lg"
-      >
-        <Container>
-        <div className="navbar-translate header-logo" id={this.state.appLogo}>
-            <NavbarBrand
-              data-placement="bottom"
-              to="/"
-              rel="noopener noreferrer"
-              tag={Link}
-            >
-              <img
-                src={Logo}
-                width="50%"
-                height="50%"
-                alt="brainxrain logo"
-                />
-            </NavbarBrand>
-          </div>
-
-          <Collapse
-            className={"justify-content-end " + this.state.collapseOut}
-            navbar
-            isOpen={this.state.collapseOpen}
-            onExiting={onCollapseExiting}
-            onExited={onCollapseExited}
-          >
-            <Nav navbar>
-              {navItems}
-            </Nav>
-          </Collapse>
-        </Container>
-      </Navbar>
-    );
-  }
+        
+        <button
+          aria-expanded={collapseOpen}
+          className="navbar-toggler navbar-toggler"
+          onClick={toggleCollapse}
+        >
+          <span className="navbar-toggler-bar bar1" />
+          <span className="navbar-toggler-bar bar1" />
+          <span className="navbar-toggler-bar bar3" />
+        </button>
+          <Collapse isOpen={collapseOpen} navbar>
+          <Nav navbar>
+            {navItems}
+          </Nav>
+        </Collapse>
+      </Container>
+    </Navbar>
+  );
+  
 }
 
 export default Navigation;

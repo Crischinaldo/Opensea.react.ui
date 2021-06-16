@@ -782,3 +782,20 @@ html {
   width: 24px;
   height: 24px;
 }
+
+@media screen and (max-width: 991px) {
+  .navbar .navbar-toggler-bar {
+      display: block;
+      position: relative;
+      width: 22px;
+      height: 1px;
+      border-radius: 1px;
+      background: #ffffff;
+  }
+}
+
+@media screen and (max-width: 991px) {
+.nft-nav .navbar-collapse {
+  background-color: whitesmoke;
+}
+}
