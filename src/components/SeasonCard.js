@@ -8,7 +8,7 @@ const SeasonCard = (props) => {
             <article className="season-small-inner-wrapper">
             <a href={props.seasonHref} class="season-small-anchor">
             <header class="season-small-header">
-            <div className="season-small-name">
+            <div className="season-small-name text-black">
                 {props.name}
             </div>
             </header>
