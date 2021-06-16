@@ -28,7 +28,7 @@ class SeasonsPage extends React.Component {
               <NFTHeader/>
           </Suspense>
             <div className="nft-wrapper">
-            <section className="mt-0 page-min-height bg-white section section-l">
+            <section className="mt-0 page-min-height bg-gray-smoke section section-l">
               <Container>
               <Suspense  fallback={LoaderSpinner(this.state.loading)}>
                 <SeasonOverview />

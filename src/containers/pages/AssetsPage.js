@@ -21,7 +21,7 @@ const AssetsPage = () => {
             <NFTHeader/>
         </Suspense>
         <div className="wrapper">
-        <section className="mt-0 page-min-height nft-overview section section-l">
+        <section className="mt-0 page-min-height bg-gray-smoke nft-overview section section-l">
             <Container>
             <Suspense  fallback={LoaderSpinner(isLoading)}>
             <MediaOverview />

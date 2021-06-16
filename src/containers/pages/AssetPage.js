@@ -65,7 +65,7 @@ const AssetPage = (props) => {
             <NFTHeader/>
         </Suspense>
         <div className="nft-wrapper">
-            <section className="page-min-height">
+            <section className="page-min-height bg-gray-smoke">
                 <Container>
                 {isLoading 
             ? <LoaderSpinner/>

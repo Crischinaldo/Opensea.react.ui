@@ -19,7 +19,7 @@ class NFTFooter extends React.Component {
       <footer className="bg-white nft-footer">
         <Container>
         <Row className="row-grid flex-row">
-            <Col md="4">
+            <Col md="3">
             <div className="navbar-translate header-logo app-logo">
             <NavbarBrand
               data-placement="bottom"
@@ -42,7 +42,7 @@ class NFTFooter extends React.Component {
             </div>
 
             </Col>
-            <Col md="2" className="ml-5">
+            <Col md="3">
               <Nav>
                 <h4 className="text-black">Resources</h4>
                 <NavItem>
@@ -67,7 +67,7 @@ class NFTFooter extends React.Component {
                 </NavItem>
               </Nav>
             </Col>
-            <Col  md="2">
+            <Col  md="3">
               <Nav>
               <h4 className="text-black">NFT</h4>
                 <NavItem>
@@ -83,7 +83,7 @@ class NFTFooter extends React.Component {
               </Nav>
             </Col>
 
-            <Col md="2">
+            <Col md="3">
               <Nav>
               <h4 className="text-black">General</h4>
                 <NavItem>
