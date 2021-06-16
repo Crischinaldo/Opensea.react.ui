@@ -39,7 +39,7 @@ const FAQ = (props) => {
     
         rows: [
             {
-                title: "What is an NFT?",
+                title: "What is a NFT?",
                 content: `An NFT is a digital asset that represents real-world objects like art, music, in-game items and videos.
                 NFTs are based on a Blockchain, often on the Ethereum blockchain. `,
             },

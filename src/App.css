@@ -821,6 +821,12 @@ html {
   }
 }
 
+.nft-nav {
+  border-bottom: 1px solid rgb(229, 232, 235);
+  box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px !important;
+  z-index: 1000;
+}
+
 @media screen and (max-width: 991px) {
 .nft-nav .navbar-collapse {
   background-color: whitesmoke;
@@ -834,5 +840,5 @@ html {
 }
 
 .bg-gray-smoke {
-  background-color: whitesmoke;
+  background-color: white;
 }
