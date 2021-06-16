@@ -826,3 +826,9 @@ html {
   background-color: whitesmoke;
 }
 }
+
+@media screen and (max-width: 991px) {
+.navbar .navbar-brand {
+    height: 100%;
+}
+}
