@@ -65,7 +65,7 @@ const AssetPage = (props) => {
             <NFTHeader/>
         </Suspense>
         <div className="nft-wrapper">
-            <section className="bg-white page-min-height">
+            <section className="page-min-height">
                 <Container>
                 {isLoading 
             ? <LoaderSpinner/>
@@ -85,8 +85,8 @@ const AssetPage = (props) => {
                 <div class="item--frame">
                     <section className="item--sell-frame"></section>
                         <div className="trade--main">
-                        <div class="TradeStation--ask-label mb-2 ml-2">price</div>
-                        <div class="TradeStation--price-container"><img alt="eth" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg" size="14" className="eth-logo-big"/>{!asset.price ? '0.00' : asset.price}
+                        <div class="trade--label mb-2 ml-2">price</div>
+                        <div class="trade--price-container"><img alt="eth" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg" size="14" className="eth-logo-big"/>{!asset.price ? '0.00' : asset.price}
                         </div>
                         <a href={asset.openseaLink}>
                         <div className="btn-wrapper mt-5 float-end">

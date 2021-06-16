@@ -8,13 +8,15 @@ const AssetCard = (props) => {
             <Link to={props.internUrl} className="asset-anchor">
             <header className="asset-header"></header>
                 <div className="asset-content">
-                    <div className="asset-content-asset pl-md-5 embed-responsive embed-responsive-16by9">
+                    <div className="asset-media">
+                    <div className="asset-content-asset">
                 
                         <img
-                        className='embed-responsive-item'
+                        className="image--image"
                         top 
                         src={props.image} 
                         alt={props.name}  />
+                    </div>
                     </div>
                 </div>
                 <div className="asset-card-footer">
