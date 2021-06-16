@@ -6,7 +6,6 @@ const WhoAmI = React.lazy(() => import('./components/WhoAmI'));
 const Product = React.lazy(() => import('./components/Product'));
 const Faq = React.lazy(() => import('./components/Faq'));
 
-const NFTPage = React.lazy(() => import('./containers/pages/NFTPage'));
 const SeasonPage = React.lazy(() => import('./containers/pages/SeasonPage'));
 const AssetPage = React.lazy(() => import('./containers/pages/AssetPage'));
 const AssetsPage = React.lazy(() => import('./containers/pages/AssetsPage'));
