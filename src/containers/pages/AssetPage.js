@@ -66,37 +66,42 @@ const AssetPage = (props) => {
         </Suspense>
         <div className="nft-wrapper">
             <section className="page-min-height bg-gray-smoke">
-                <Container>
+                <Container className="d-flex">
                 {isLoading 
             ? <LoaderSpinner/>
                 :  
                 <Row>      
                 <Col className="item--summary mt-5">
                 <AssetMedia
-                image={asset.image} 
+                image={asset.image}
                 name={asset.name}
                 />
-                <p className="item--info-color">{asset.description}</p>
+                
                 </Col>
 
                 <Col className="mt-5">
                 
                 <h1 className="text-black">{asset.name}</h1>
+                <p className="item--info-color mb-5">{asset.description}</p>
                 <div class="item--frame">
                     <section className="item--sell-frame"></section>
                         <div className="trade--main">
-                        <div class="trade--label mb-2 ml-2">price</div>
-                        <div class="trade--price-container"><img alt="eth" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg" size="14" className="eth-logo-big"/>{!asset.price ? '0.00' : asset.price}
-                        </div>
-                        <a href={asset.openseaLink}>
-                        <div className="btn-wrapper mt-5 float-end">
-                            
-                        <Button className="btn-round btn-product" color="magenta" type="button">
-                            Buy
-                        </Button>
-                        
-                        </div>
-                        </a>
+                            <Row>
+                            <Col>
+                            <div class="trade--label mb-2 ml-2">current price</div>
+                            <div class="trade--price-container"><img alt="eth" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg" size="14" className="eth-logo-big"/><div className="asset--current-price">{!asset.price ? '0.00' : asset.price}</div>
+                            </div>
+                            </Col>
+                            <Col className="trade--flex">
+                                <a href={asset.openseaLink}>
+               
+                                <Button className="btn-round btn-buy-nft" color="magenta" type="button">
+                                    Buy
+                                </Button>
+       
+                                </a>
+                            </Col>
+                            </Row>
                         </div>
                     </div>
                 </Col>

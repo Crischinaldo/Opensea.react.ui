@@ -32,7 +32,7 @@ const SeasonOverview = (props) => {
    const url = OpenSea.endpoints.collection.url
    + '?owner=' + OpenSea.walletAddress
    + '&asset_contract_address=' + OpenSea.contractAddress
-   + 'offset=5';
+   + '&limit=5';
 
 
    const _collections = [];
