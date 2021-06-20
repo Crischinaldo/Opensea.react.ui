@@ -772,12 +772,31 @@ html {
 }
 
 .trade--main{
-  background-color: rgb(251, 253, 255);
-    padding: 12px;
+  border-radius: 5px;
+  border: 1px solid rgb(229, 232, 235);
+  color: rgb(14, 14, 14);
+  background-color: rgb(247, 230, 252);
+  overflow: hidden;
+  padding: 12px;
+
+  
+}
+
+.btn-buy-nft {
+
+  bottom: 0;
+  right: 5%;
+}
+
+.trade--flex {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
 .trade--main .trade--label {
-  color: rgb(112, 122, 131);
+  color: rgb(116, 107, 122);
+  font-size: 1rem;
 }
 
 .text-info-2 {
@@ -788,12 +807,15 @@ html {
   display: flex;
   margin-bottom: 5px;
   flex-wrap: wrap;
-  font-size: 30px;
+  font-size: 30px !important;
 }
 
+.asset--current-price {
+  color:indigo;
+}
 
 .eth-logo-big {
-  
+  align-self: center; 
   width: 24px;
   height: 24px;
 }
@@ -831,6 +853,7 @@ html {
   background-color: white;
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .nft-footer .nav {
       float: none;
@@ -861,3 +884,5 @@ html {
   color: #6603ad !important;
 }
 
+=======
+>>>>>>> 62ef188e5ea512779d1f677628692d1cdff937a8
