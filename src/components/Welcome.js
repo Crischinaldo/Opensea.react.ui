@@ -36,7 +36,13 @@ const Welcome = (props) => {
                         Welcome to BrainXRain!
                     </h2>
                     <p className="text-white">
-                        We showcase art that you can buy with cryptocurrency. The animations which are shown on this platform and can also be found here (opensea.com/profile)
+                        We showcase art that you can buy with cryptocurrency. The animations are shown <a
+                  className="font-weight-bold text-info mt-5"
+                  href="/marketplace/assets"
+
+              >
+                  here{" "}
+              </a>
                     </p>
                     <br />
                     <div className="btn-wrapper mb-3">
