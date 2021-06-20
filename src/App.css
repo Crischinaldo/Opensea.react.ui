@@ -13,6 +13,10 @@
   }
 }
 
+.asset-card-wrapper {
+  
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -853,7 +857,6 @@ html {
   background-color: white;
 }
 
-<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   .nft-footer .nav {
       float: none;
@@ -884,5 +887,3 @@ html {
   color: #6603ad !important;
 }
 
-=======
->>>>>>> 62ef188e5ea512779d1f677628692d1cdff937a8

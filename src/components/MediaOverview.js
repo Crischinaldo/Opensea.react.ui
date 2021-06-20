@@ -30,9 +30,9 @@ const MediaOverview = (props) => {
    // this.setState({seasonName: this.props.match.params.season_name}); - not working probably because of async threads
 
    const url = OpenSea.endpoints.assets.url 
-   + '?owner=' + OpenSea.walletAddress
-   + '&asset_contract_address=' + OpenSea.contractAddress
-   + '&limit=5';
+  // + '?owner=' + OpenSea.walletAddress
+  // + '&asset_contract_address=' + OpenSea.contractAddress
+  + '?limit=60';
 
    const _assets = [];
 
@@ -44,6 +44,7 @@ const MediaOverview = (props) => {
 
            // localStorage.setItem('assets', JSON.stringify(res.data));
            res.assets.forEach((asset, idx) => { 
+             
             const assetUrl = OpenSea.endpoints.asset.url.replace("{asset_contract_address}", OpenSea.contractAddress).replace("{token_id}", asset.token_id);
             const internUrl = "/marketplace/asset/" +  OpenSea.contractAddress + "/" + asset.token_id;
              _assets.push(
@@ -68,7 +69,7 @@ const MediaOverview = (props) => {
   const renderedAssets = assets.map((asset) => {
     
     return (
-      <div className="m-3">
+      <div className="m-2 asset-card-wrapper">
         <AssetCard 
           image={asset.image} 
           description={asset.description} 
@@ -87,8 +88,9 @@ const MediaOverview = (props) => {
         {isLoading 
           ? <LoaderSpinner/>
           :  <Container>
-              
+              <Row>
               <h1 className="text-black">Gallery</h1>
+              </Row>
               <Row>
               <div className="collections d-flex flex-wrap p-2 align-items-left">
                 {renderedAssets}

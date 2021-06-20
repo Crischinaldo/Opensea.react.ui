@@ -30,9 +30,9 @@ const SeasonOverview = (props) => {
   useEffect( () => {
     
    const url = OpenSea.endpoints.collection.url
-   + '?owner=' + OpenSea.walletAddress
-   + '&asset_contract_address=' + OpenSea.contractAddress
-   + '&limit=5';
+    // '?owner=' + OpenSea.walletAddress
+   // '&asset_contract_address=' + OpenSea.contractAddress
+   + '?limit=30';
 
 
    const _collections = [];
