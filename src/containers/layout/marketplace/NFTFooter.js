@@ -16,10 +16,10 @@ import Logo from '../../../assets/images/logo_font_black.png';
 class NFTFooter extends React.Component {
   render() {
     return (
-      <footer className="bg-white nft-footer">
+      <footer className="bg-white nft-footer footer">
         <Container>
         <Row className="row-grid flex-row">
-            <Col md="3">
+            <Col className="mt-3" md="4">
             <div className="navbar-translate header-logo app-logo">
             <NavbarBrand
               data-placement="bottom"
@@ -36,15 +36,15 @@ class NFTFooter extends React.Component {
             </NavbarBrand>
           </div>
             <div className="brainxrain-desc">
-            <p className="text-black font-size-footer">
+            <p className="text-black-transparent font-size-footer">
             BrainXRain is a place where you can buy digital assets along with a physical NFT for crypto currency.
             </p>
             </div>
 
             </Col>
-            <Col md="3">
+            <Col md="2">
               <Nav>
-                <h4 className="text-black">Resources</h4>
+                <h4 className="text-purple-2">Resources</h4>
                 <NavItem>
                   <NavLink to="/#about" tag={Link}>
                     About
@@ -67,9 +67,9 @@ class NFTFooter extends React.Component {
                 </NavItem>
               </Nav>
             </Col>
-            <Col  md="3">
+            <Col  md="2">
               <Nav>
-              <h4 className="text-black">NFT</h4>
+              <h4 className="text-purple-2">NFT</h4>
                 <NavItem>
                 <NavLink to="/marketplace/assets" tag={Link}>
                    Assets
@@ -83,9 +83,9 @@ class NFTFooter extends React.Component {
               </Nav>
             </Col>
 
-            <Col md="3">
+            <Col md="2">
               <Nav>
-              <h4 className="text-black">General</h4>
+              <h4 className="text-purple-2">General</h4>
                 <NavItem>
                   <NavLink to="/imprint" tag={Link}>
                    imprint

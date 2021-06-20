@@ -19,8 +19,8 @@ class DefaultFooter extends React.Component {
     return (
       <footer className="footer">
         <Container>
-        <Row className="row-grid flex-row">
-            <Col md="4">
+        <Row>
+            <Col className="mt-3" md="4">
             <div className="navbar-translate header-logo app-logo">
             <NavbarBrand
               data-placement="bottom"
@@ -37,15 +37,15 @@ class DefaultFooter extends React.Component {
             </NavbarBrand>
           </div>
             <div className="brainxrain-desc">
-            <p className="text-white font-size-footer">
+            <p className="font-size-footer">
             BrainXRain is a place where you can buy digital assets along with a physical NFT for crypto currency.
             </p>
             </div>
 
             </Col>
-            <Col md="2" className="ml-5">
-              <Nav className="text-white">
-                <h4 className="text-white">Resources</h4>
+            <Col md="2">
+              <Nav className="text-info-2">
+                <h4 className="text-magenta">Resources</h4>
                 <NavItem>
                   <NavLink to="/#about" tag={Link}>
                     About
@@ -70,7 +70,7 @@ class DefaultFooter extends React.Component {
             </Col>
             <Col  md="2">
               <Nav>
-              <h4 className="text-white">NFT</h4>
+              <h4 className="text-magenta">NFT</h4>
                 <NavItem>
                   <NavLink to="/marketplace/assets" tag={Link}>
                    Assets
@@ -86,7 +86,7 @@ class DefaultFooter extends React.Component {
 
             <Col md="2">
               <Nav>
-              <h4 className="text-white">General</h4>
+              <h4 className="text-magenta">General</h4>
                 <NavItem>
                   <NavLink to="/imprint" tag={Link}>
                    imprint

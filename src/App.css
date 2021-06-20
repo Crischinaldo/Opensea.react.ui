@@ -40,6 +40,10 @@
   color: black;
 }
 
+.text-black-transparent {
+  color: rgba(0, 0, 0, 0.8) !important;
+}
+
 .jCrwJV {
   transition: all 0.1s ease 0s;
   z-index: 2;
@@ -665,10 +669,6 @@ html {
   padding: 30px 0;
 }
 
-.footer .nav {
-  padding-top: 0 !important;
-}
-
 .nft-header {
     border-bottom: 1px solid rgb(229, 232, 235);
     box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
@@ -698,23 +698,7 @@ html {
 }
 
 
-.nft-footer .nav {
-  padding-top: 0 !important;
-  display: block;
-  float: left;
-  margin-bottom: 0;
-  padding-top: 25px;
-  list-style: none;
 
-}
-
-.nft-footer .nav-link {
-  color: black;
-  padding: 10px 0;
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  text-decoration: none;
-}
 .page-min-height {
   min-height: 100vh;
 }
@@ -796,6 +780,10 @@ html {
   color: rgb(112, 122, 131);
 }
 
+.text-info-2 {
+  color: rgb(184, 186, 189);
+}
+
 .trade--main .trade--price-container {
   display: flex;
   margin-bottom: 5px;
@@ -842,3 +830,34 @@ html {
 .bg-gray-smoke {
   background-color: white;
 }
+
+@media screen and (max-width: 768px) {
+  .nft-footer .nav {
+      float: none;
+      padding-left: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nft-footer .nav {
+      float: none;
+      padding-left: 0;
+  }
+}
+
+.nft-footer .nav-link {
+    color: rgba(0, 0, 0, 0.8) !important;
+}
+
+.nft-footer .nav-link:hover {
+  color: #6603ad !important;
+}
+
+.nft-nav .navbar-nav .nav-item .nav-link:hover {
+  color: #6603ad !important;
+}
+
+.text-purple-2 {
+  color: #6603ad !important;
+}
+
