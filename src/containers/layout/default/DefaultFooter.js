@@ -70,14 +70,9 @@ class DefaultFooter extends React.Component {
             <Col  md="2">
               <Nav>
               <h4 className="text-magenta">NFT</h4>
-                <NavItem>
-                  <NavLink to="/marketplace/assets" tag={Link}>
+              <NavItem>
+                <NavLink to="/nft/gallery" tag={Link}>
                    Assets
-                  </NavLink>
-                </NavItem>
-                <NavItem>
-                  <NavLink to="/marketplace/seasons" tag={Link}>
-                   Seasons
                   </NavLink>
                 </NavItem>
               </Nav>

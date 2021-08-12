@@ -94,7 +94,7 @@ class SeasonPage extends React.Component {
                     <Container>
                     <h1 className="text-black">{this.props.match.params.season_name}</h1>
                     <Row>
-                    <div className="collections d-flex flex-wrap p-2 align-items-left">
+                    <div className="gallery d-flex flex-wrap p-2 align-items-left">
                         {renderedAssets}
                         </div>
                     </Row> 

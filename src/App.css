@@ -945,3 +945,10 @@ html {
 .btn-buy-nft {
   width: 10rem;
 }
+
+@media screen and (max-width: 991px) {
+.gallery {
+  align-items: center;
+  justify-content: center;
+}
+}
