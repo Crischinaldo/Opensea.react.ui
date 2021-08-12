@@ -1,6 +1,6 @@
 {
   "short_name": "BrainXRain",
-  "name": "NFT artwork buyable with cryptocurrency",
+  "name": "stunning NFT artwork buyable with cryptocurrency",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo-smartphone.png",
+      "src": "logo-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo-smartphone.png",
+      "src": "logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
