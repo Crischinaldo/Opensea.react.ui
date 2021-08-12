@@ -12,12 +12,12 @@ const socialLinks = {
         title: 'Follow BrainXRain on instagram',
         name: 'instagram'
       },
-      {
-        link: 'https://discord.gg/qfDU3fdNcV',
-        icon: 'users',
-        title: 'Join the BrainXRain Discord Server',
-        name: 'discord'
-      },
+     // {
+    //    link: 'https://discord.gg/qfDU3fdNcV',
+    //    icon: 'users',
+    //    title: 'Join the BrainXRain Discord Server',
+    //    name: 'discord'
+    //  },
     ],
   };
   
