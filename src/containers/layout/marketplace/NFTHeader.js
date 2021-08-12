@@ -17,7 +17,9 @@ class NFTHeader extends Component {
   const { loading } = this.state;
 
   return (
-    < NFTHeaderTop/>
+    <div id="header">
+      < NFTHeaderTop/>
+    </div>
     )
   }
 }

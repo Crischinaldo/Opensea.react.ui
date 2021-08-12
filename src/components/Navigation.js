@@ -14,7 +14,6 @@ const Navigation = (props) => {
   const [expand, setExpand] = React.useState("");
   const [expandLogo, setExpandLogo] = React.useState("app-logo");
 
-
   React.useEffect(() => {
     window.addEventListener("scroll", expandNav);
     return function cleanup() {
@@ -86,8 +85,6 @@ const Navigation = (props) => {
               />
           </NavbarBrand>
         </div>
-
-        
         <button
           aria-expanded={collapseOpen}
           className="navbar-toggler navbar-toggler"

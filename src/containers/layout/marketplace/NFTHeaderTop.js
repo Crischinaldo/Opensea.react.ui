@@ -1,16 +1,18 @@
 import React from "react";
 import {
-  Container, Nav
+  Container, Nav, NavbarBrand, Navbar
 } from "reactstrap";
 import SocialLinks from '../../../components/SocialLinks';
 import _socialLinks from '../../../_sociallinks';
-
+import Logo from '../../../assets/images/logo_font_black.png';
+import { HashLink as Link } from 'react-router-hash-link';
 
 class HeaderTop extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      expand: ""
+      expand: "nav-expand-top",
+      expandLogo: "app-logo",
     };
   }
 
@@ -21,7 +23,6 @@ class HeaderTop extends React.Component {
   componentWillUnmount() {
     window.removeEventListener("scroll", this.expand);
   }
-
 
   expand = () => {
     if (
@@ -48,8 +49,27 @@ class HeaderTop extends React.Component {
   render() {
     const socialLinks = _socialLinks;
     return (
-      <div className={"fixed-top-upper header-top bg-gray-900 " + this.state.expand}>
+      <Navbar
+      className={"fixed-top-upper nft-header bg-white header-bottom " + this.state.expand}
+      color-on-scroll="100"
+      expand="lg"
+      >
       <Container>
+      <div className="navbar-translate header-logo" id={this.state.expandLogo}>
+          <NavbarBrand
+            data-placement="bottom"
+            to="/"
+            rel="noopener noreferrer"
+            tag={Link}
+          >
+            <img
+              src={Logo}
+              width="50%"
+              height="50%"
+              alt="brainxrain logo"
+              />
+          </NavbarBrand>
+        </div>
       <Nav
         className={"social-links"}
         color-on-scroll="100"
@@ -57,7 +77,7 @@ class HeaderTop extends React.Component {
         <SocialLinks config={socialLinks}/>
        </Nav>
        </Container>
-       </div>
+       </Navbar>
     );
   }
 }

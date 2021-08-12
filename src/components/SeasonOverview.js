@@ -36,7 +36,6 @@ const SeasonOverview = (props) => {
      .then(res => res.data)
      .then(res => {
            // localStorage.setItem('assets', JSON.stringify(res.data));
-         console.log(res);
          res.collections.forEach((collection, idx) => { 
            _collections.push(
                {"image": collection.image_url,

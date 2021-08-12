@@ -34,7 +34,6 @@ const MediaOverview = (props) => {
    axios.get(url)
      .then(res => res.data)
      .then(res => {
-           console.log(res);
            res.assets.forEach((asset, idx) => { 
             const assetUrl = OpenSea.endpoints.asset.url.replace("{asset_contract_address}", OpenSea.contractAddress).replace("{token_id}", asset.token_id);
             const routeName = asset.name.split(" ")[1].toLowerCase();
@@ -81,9 +80,6 @@ const MediaOverview = (props) => {
         {isLoading 
           ? <LoaderSpinner/>
           :  <Container>
-              <Row>
-              <h1 className="text-black">Gallery</h1>
-              </Row>
               <Row>
               <div className="collections d-flex flex-wrap p-2 align-items-left">
                 {renderedAssets}

@@ -1,17 +1,25 @@
 import React from "react";
-import { HashLink as Link } from 'react-router-hash-link';
 // reactstrap components
 import {
-  Col, Container, Nav, NavbarBrand, NavItem,
-  NavLink, Row
+  NavItem,
+  NavLink,
+  Nav,
+  Container,
+  Row,
+  Col,
+  NavbarBrand
 } from "reactstrap";
+import { HashLink as Link } from 'react-router-hash-link';
 //import Logo from '../../../assets/images/logo_font.png';
 import Logo from '../../../assets/images/logo_font_black.png';
+import SocialLinks from '../../../components/SocialLinks';
+import _socialLinks from '../../../_sociallinks';
 
 class NFTFooter extends React.Component {
   render() {
+    const socialLinks = _socialLinks;
     return (
-      <footer className="bg-white nft-footer footer">
+      <footer className="bg-white footer" id="nft-footer">
         <Container>
         <Row className="row-grid flex-row">
             <Col className="mt-3" md="4">
@@ -39,7 +47,7 @@ class NFTFooter extends React.Component {
             </Col>
             <Col md="2">
               <Nav>
-                <h4 className="text-purple-2">Resources</h4>
+                <h4>Resources</h4>
                 <NavItem>
                   <NavLink to="/#about" tag={Link}>
                     About
@@ -64,7 +72,7 @@ class NFTFooter extends React.Component {
             </Col>
             <Col  md="2">
               <Nav>
-              <h4 className="text-purple-2">NFT</h4>
+              <h4>NFT</h4>
                 <NavItem>
                 <NavLink to="/marketplace/assets" tag={Link}>
                    Assets
@@ -80,7 +88,7 @@ class NFTFooter extends React.Component {
 
             <Col md="2">
               <Nav>
-              <h4 className="text-purple-2">General</h4>
+              <h4>General</h4>
                 <NavItem>
                   <NavLink to="/imprint" tag={Link}>
                    imprint
@@ -91,6 +99,12 @@ class NFTFooter extends React.Component {
                    privacy
                   </NavLink>
                 </NavItem>
+              </Nav>
+            </Col>
+            <Col md="2">
+              <Nav>
+              <h4>Social</h4>
+                <SocialLinks config={socialLinks}/>
               </Nav>
             </Col>
             </Row>

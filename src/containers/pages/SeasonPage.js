@@ -41,7 +41,6 @@ class SeasonPage extends React.Component {
     axios.get(url)
         .then(res => res.data)
         .then(res => {
-            console.log(res);
             // localStorage.setItem('assets', JSON.stringify(res.data));
             res.assets.forEach((asset, idx) => { 
                 const assetUrl = OpenSea.endpoints.asset.url.replace("{asset_contract_address}", OpenSea.contractAddress).replace("{token_id}", asset.token_id);

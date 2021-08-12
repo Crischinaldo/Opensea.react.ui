@@ -227,7 +227,7 @@ html {
 .asset-image-inner-wrapper {
   height: 100%;
   width: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(233, 230, 230);
   border: 1px solid rgb(229, 232, 235);
   border-radius: 5px;
   position: relative;
@@ -242,7 +242,7 @@ html {
 
 .image-inner-wrapper {
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(233, 230, 230);
   border: 1px solid rgb(229, 232, 235);
   border-radius: 5px;
   position: relative;
@@ -267,11 +267,11 @@ html {
   height: 100%;
   overflow: hidden;
   pointer-events: initial;
-  background: whitesmoke;
+  background: rgb(233, 230, 230);
 }
 
 .asset-header {
-  background: whitesmoke;
+  background: rgb(233, 230, 230);
   padding: 12px 16px;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
@@ -295,7 +295,7 @@ html {
   display: flex;
   padding: 12px 16px;
   flex-direction: column;
-  background: whitesmoke;
+  background: rgb(233, 230, 230);
 }
 
 .asset-card-footer-content {
@@ -447,6 +447,7 @@ html {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: magenta;
 }
 
 .image--image {
@@ -677,7 +678,6 @@ html {
     border-bottom: 1px solid rgb(229, 232, 235);
     box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
     height: 72px;
-    position: sticky;
     top: 0px;
     z-index: 50;
     transition: top 0.5s ease 0s;
@@ -691,16 +691,26 @@ html {
   color: #6603ad;
 }
 
-.nft-footer {
-  border-top: 1px solid rgb(229, 232, 235) !important;
-  box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
-
-  border-top: 2px solid #fd5d93 !important;
-  background: #2d2f30;
-  padding: 30px 0;
-  
+#nft-footer {
+  border-top: none !important;
 }
 
+#nft-footer h4 {
+  color: black;
+}
+
+#nft-footer a {
+  color: black;
+}
+
+.nft-header i {
+  color: black;
+}
+
+.nft-header i:hover {
+  color: magenta;
+  transition:all 0.1s ease 0s;
+}
 
 
 .page-min-height {
@@ -854,7 +864,7 @@ html {
 }
 
 .bg-gray-smoke {
-  background-color: white;
+  background-color: whitesmoke;
 }
 
 @media screen and (max-width: 768px) {
@@ -887,3 +897,13 @@ html {
   color: #6603ad !important;
 }
 
+.bg-darker-gray-2 {
+  background: #4D4D4D;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar-brand img {
+    width: 80%;
+   height: 80%;
+  }
+}

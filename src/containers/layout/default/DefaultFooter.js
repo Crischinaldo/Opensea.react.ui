@@ -1,21 +1,20 @@
 
 import React from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 // reactstrap components
 import {
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
-  NavbarBrand
+  Col, Container, Nav, NavbarBrand, NavItem,
+  NavLink, Row
 } from "reactstrap";
-import { HashLink as Link } from 'react-router-hash-link';
 //import Logo from '../../../assets/images/logo_font.png';
 import Logo from '../../../assets/images/logo_font_black.png';
+import SocialLinks from '../../../components/SocialLinks';
+import _socialLinks from '../../../_sociallinks';
 
 class DefaultFooter extends React.Component {
+  
   render() {
+    const socialLinks = _socialLinks;
     return (
       <footer className="footer">
         <Container>
@@ -97,6 +96,12 @@ class DefaultFooter extends React.Component {
                    privacy
                   </NavLink>
                 </NavItem>
+              </Nav>
+            </Col>
+            <Col md="2">
+              <Nav>
+              <h4 className="text-magenta">Social</h4>
+                  <SocialLinks config={socialLinks}/>
               </Nav>
             </Col>
             </Row>
