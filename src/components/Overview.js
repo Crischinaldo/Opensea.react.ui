@@ -1,12 +1,10 @@
-import React, { useState , Component, useEffect } from 'react';
-
+import React from 'react';
 import {
-  Container,
-  Row,
-  Col
+  Container
 } from "reactstrap";
-import SeasonOverview from './SeasonOverview';
 import MediaOverview from './MediaOverview';
+import SeasonOverview from './SeasonOverview';
+
 
 
 // https://stackoverflow.com/questions/38093760/how-to-access-a-dom-element-in-react-what-is-the-equilvalent-of-document-getele - refs

@@ -1,16 +1,11 @@
+import axios from 'axios';
 import React, { Suspense } from 'react';
 import { RotateSpinner } from "react-spinners-kit";
 import {
-  Container,
-  CarouselItem,
-  CarouselCaption,
-  Col,
-  Row,
+    Container, Row
 } from "reactstrap";
+import AssetCard from '../../components/AssetCard';
 import OpenSea from '../../_opensea';
-import axios from 'axios';
-import  AssetCard from '../../components/AssetCard';
-import { useParams } from 'react-router-dom';
 
 const color = "#900C3F";
 

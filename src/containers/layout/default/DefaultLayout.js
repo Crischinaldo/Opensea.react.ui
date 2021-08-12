@@ -1,16 +1,7 @@
-import React, { Component, Suspense } from 'react';
-import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
-import {
-    NavItem,
-    NavLink,
-    Nav,
-    Container,
-    Row,
-    Col
-  } from "reactstrap";
-import _routes from '../../../_routes';
+import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
-import _nav from '../../../_nav';
+import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
+import _routes from '../../../_routes';
     
 // routes config
 //import routes from '../../routes';

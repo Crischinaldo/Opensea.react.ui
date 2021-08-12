@@ -1,27 +1,18 @@
-import React, { useState , Component, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
-
 import {
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
   Button,
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
+  Carousel, CarouselCaption, CarouselItem, Col, Container,
+  Row
 } from "reactstrap";
-import slideShow from '../_slideshow';
-import slideShow1 from '../assets/videos/slideshow_1.mp4';
-import slideShow2 from '../assets/images/slideshow_2.png';
-import slideShow3 from '../assets/images/slideshow_3.png';
 import First from '../assets/images/nr1.png';
 import Second from '../assets/images/nr2.png';
 import Third from '../assets/images/nr3.png';
+import slideShow2 from '../assets/images/slideshow_2.png';
+import slideShow3 from '../assets/images/slideshow_3.png';
+import slideShow1 from '../assets/videos/slideshow_1.mp4';
+import slideShow from '../_slideshow';
+
 
 
 // https://stackoverflow.com/questions/38093760/how-to-access-a-dom-element-in-react-what-is-the-equilvalent-of-document-getele - refs

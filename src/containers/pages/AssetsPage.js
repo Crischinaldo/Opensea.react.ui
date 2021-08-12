@@ -1,11 +1,10 @@
-import React, {Suspense, useState} from 'react';
+import React, { Suspense, useState } from 'react';
 import {
-
-  Container,
+    Container
 } from "reactstrap";
-
-import LoaderSpinner from '../../components/widgets/LoaderSpinner';
 import MediaOverview from '../../components/MediaOverview';
+import LoaderSpinner from '../../components/widgets/LoaderSpinner';
+
 
 const NFTFooter = React.lazy(() => import('../layout/marketplace/NFTFooter'));
 const NFTHeader = React.lazy(() => import('../layout/marketplace/NFTHeader'));

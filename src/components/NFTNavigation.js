@@ -1,24 +1,10 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-import OpenSea from '../_opensea'
-import Logo from '../assets/images/logo_font_black.png'
 import { HashLink as Link } from 'react-router-hash-link';
 import {
-  Collapse,
-  NavbarBrand,
-  Navbar,
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownItem,
-  DropdownMenu,
-  Col,
-  Row,
-  NavbarToggler
+  Collapse, Container, Nav, Navbar, NavbarBrand, NavItem,
+  NavLink
 } from "reactstrap";
+import Logo from '../assets/images/logo_font_black.png';
 
 const NFTNavigation = (props) => {
 

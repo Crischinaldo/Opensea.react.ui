@@ -1,15 +1,10 @@
 import React from "react";
+import { HashLink as Link } from 'react-router-hash-link';
 // reactstrap components
 import {
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
-  NavbarBrand
+  Col, Container, Nav, NavbarBrand, NavItem,
+  NavLink, Row
 } from "reactstrap";
-import { HashLink as Link } from 'react-router-hash-link';
 //import Logo from '../../../assets/images/logo_font.png';
 import Logo from '../../../assets/images/logo_font_black.png';
 

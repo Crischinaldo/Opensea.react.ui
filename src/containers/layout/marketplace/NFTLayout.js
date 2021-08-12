@@ -1,16 +1,7 @@
 import React, { Component, Suspense } from 'react';
-import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
-import {
-    NavItem,
-    NavLink,
-    Nav,
-    Container,
-    Row,
-    Col
-  } from "reactstrap";
-import _routes from '../../../_routes';
 import { Route, Switch } from 'react-router-dom';
-import _nav from '../../../_nav';
+import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
+import _routes from '../../../_routes';
 const DefaultFooter = React.lazy(() => import('../default/DefaultFooter'));
 const NFTHeader = React.lazy(() => import('./NFTHeader'));
    

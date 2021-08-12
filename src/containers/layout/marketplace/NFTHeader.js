@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
-import NFTNavigation from '../../../components/NFTNavigation';
-import _routes from '../../../_routes';
-import { Route, Switch } from 'react-router-dom';
 import _nav from '../../../_nav';
-import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
-import { 
-  Container,
-  NavbarBrand } from 'reactstrap';
 import NFTHeaderTop from './NFTHeaderTop';
 
 

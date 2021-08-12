@@ -1,16 +1,13 @@
-import React, {  Suspense, useState, useEffect } from 'react';
-import {
-  Container,
-  Row,
-  Col,
-  Button
-} from "reactstrap";
-import OpenSea from '../../_opensea';
-import { RotateSpinner } from "react-spinners-kit";
 import axios from 'axios';
+import React, { Suspense, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import  AssetMedia from '../../components/AssetMedia';
-import {Link} from 'react-router-dom';
+import { RotateSpinner } from "react-spinners-kit";
+import {
+  Button, Col, Container,
+  Row
+} from "reactstrap";
+import AssetMedia from '../../components/AssetMedia';
+import OpenSea from '../../_opensea';
 
 
 const NFTFooter = React.lazy(() => import('../layout/marketplace/NFTFooter'));

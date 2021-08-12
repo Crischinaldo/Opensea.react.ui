@@ -1,17 +1,11 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import * as icoMoon from 'react-icons-kit/icomoon';
 import Icon from 'react-icons-kit';
-
+import * as icoMoon from 'react-icons-kit/icomoon';
 import {
-  Collapse,
-  NavbarBrand,
-  Navbar,
   NavItem,
-  NavLink,
-  Nav,
-  Container,
+  NavLink
 } from "reactstrap";
+
 
 class SocialLinks extends React.Component {
   constructor(props) {

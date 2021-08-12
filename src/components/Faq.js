@@ -1,27 +1,12 @@
-import * as icoMoon from 'react-icons-kit/icomoon';
-import classnames from "classnames";
-import Icon from 'react-icons-kit';
 import {
-    TabContent,
-    TabPane,
     Container,
-    Row,
-    Col,
-    Card,
-    CardHeader,
-    CardBody,
-    Nav,
-    NavItem,
-    NavLink,
   } from "reactstrap";
 import React, { useState , Component, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import { user } from 'react-icons-kit/icomoon';
 
 import Faq from 'react-faq-component';
 
 const FAQ = (props) => {
-
     const { ref, inView, entry } = useInView({
         threshold: 0,
       });
@@ -31,12 +16,7 @@ const FAQ = (props) => {
     if (!(visible === "is-visible") && inView) {
         setVisible("is-visible");
     }
-
-    const [iconTabs, setIconsTabs] = React.useState(1);
-    const [textTabs, setTextTabs] = React.useState(1);
-
     const data = {
-    
         rows: [
             {
                 title: "what is a NFT?",
@@ -77,17 +57,12 @@ const FAQ = (props) => {
         <div id="faq" ref={ref} className={"section faq-section component-transition section-l " + visible}>
         <Container>
         <Faq
-                data={data}
-                styles={styles}
-                config={config}
-            />
+            data={data}
+            styles={styles}
+            config={config}
+        />
         </Container>
       </div>
-                        
-       
-            
-  
-         
     );
 }
 export default FAQ;

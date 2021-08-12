@@ -1,35 +1,14 @@
 import classnames from "classnames";
-import React, { useState , Component, useEffect } from 'react';
-import * as icoMoon from 'react-icons-kit/icomoon';
+import React, { useState } from 'react';
 import Icon from 'react-icons-kit';
-import {
-  NavItem,
-  NavLink,
-  Nav,
-  Row,
-  Col,
-  Button,
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  CardImg,
-  CardTitle,
-  Label,
-  FormGroup,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
-  Container,
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from "reactstrap";
+import * as icoMoon from 'react-icons-kit/icomoon';
 import { useInView } from 'react-intersection-observer';
+import {
+  Button,
+  Card, CardBody,
+  CardFooter, CardHeader, CardTitle, Col, Container, Form, FormGroup, Input, InputGroup, InputGroupAddon,
+  InputGroupText, Label, Row
+} from "reactstrap";
 
 
 // https://stackoverflow.com/questions/38093760/how-to-access-a-dom-element-in-react-what-is-the-equilvalent-of-document-getele - refs

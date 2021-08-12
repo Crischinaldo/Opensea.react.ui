@@ -1,17 +1,12 @@
-import React, { useState , Component, useEffect } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { RotateSpinner } from "react-spinners-kit";
 import {
-  Container,
-  CarouselItem,
-  CarouselCaption,
-  Col,
-  Row,
-  Button
+  Container, Row
 } from "reactstrap";
+import SeasonCard from '../components/SeasonCard';
 import OpenSea from '../_opensea';
-import axios from 'axios';
-import  SeasonCard from '../components/SeasonCard';
-import { Link } from 'react-router-dom';
 
 const color = "#900C3F";
 

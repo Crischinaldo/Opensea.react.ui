@@ -1,15 +1,12 @@
-import React, { useState , Component, useEffect } from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { RotateSpinner } from "react-spinners-kit";
 import {
   Container,
-  CarouselItem,
-  CarouselCaption,
-  Col,
   Row
 } from "reactstrap";
+import AssetCard from '../components/AssetCard';
 import OpenSea from '../_opensea';
-import axios from 'axios';
-import  AssetCard from '../components/AssetCard';
 
 const color = "#900C3F";
 

@@ -1,13 +1,11 @@
 
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
+import ReactPlayer from 'react-player';
 import {
-    Container,
-    Row,
-    Col,
-    Button,
-  } from "reactstrap";
+    Button, Col, Container,
+    Row
+} from "reactstrap";
 import opening from '../assets/videos/opening.mp4';
-import ReactPlayer from 'react-player'
 const Welcome = (props) => {
 
     const [isPlaying, setIsPlaying] = useState(false);

@@ -1,27 +1,12 @@
-import React, { Component, useEffect, useState, Suspense } from 'react';
-import {
-  NavItem,
-  NavLink,
-  Nav,
-  Container,
-  Row,
-  Col,
-  Button,
-  Carousel,
-  CarouselItem,
-  CarouselControl,
-  CarouselIndicators,
-  CarouselCaption
-} from "reactstrap";
-import Welcome from '../../components/Welcome';
-import Product from '../../components/Product';
+import React, { Suspense, useState } from 'react';
 import Commission from '../../components/Commission';
-import WhoAmI from '../../components/WhoAmI';
 import Faq from '../../components/Faq';
-
+import Product from '../../components/Product';
+import Welcome from '../../components/Welcome';
+import WhoAmI from '../../components/WhoAmI';
 import LoaderSpinner from '../../components/widgets/LoaderSpinner';
 
-import slideShow1 from '../../assets/videos/slideshow_1.mp4';
+
 
 const DefaultFooter = React.lazy(() => import('../layout/default/DefaultFooter'));
 const DefaultHeader = React.lazy(() => import('../layout/default/DefaultHeader'));

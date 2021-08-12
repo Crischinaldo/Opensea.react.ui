@@ -1,25 +1,11 @@
-import * as fontAwesome from 'react-icons-kit/fa';
-import classnames from "classnames";
+import React, { useState } from 'react';
 import Icon from 'react-icons-kit';
-import {
-    TabContent,
-    TabPane,
-    Container,
-    Row,
-    Col,
-    Card,
-    CardHeader,
-    CardBody,
-    CardTitle,
-    CardText,
-    CardFooter,
-    Nav,
-    NavItem,
-    NavLink,
-  } from "reactstrap";
-import React, { useState , Component, useEffect } from 'react';
+import * as fontAwesome from 'react-icons-kit/fa';
 import { useInView } from 'react-intersection-observer';
-import { user } from 'react-icons-kit/icomoon';
+import {
+  Card, CardBody, CardHeader, CardText, Col, Container,
+  Row
+} from "reactstrap";
 
 const WhoAmI = (props) => {
 

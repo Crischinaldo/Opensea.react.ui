@@ -1,11 +1,10 @@
 import React from "react";
-
 import {
-  Nav,
-  Container,
+  Container, Nav
 } from "reactstrap";
 import SocialLinks from '../../../components/SocialLinks';
 import _socialLinks from '../../../_sociallinks';
+
 
 class HeaderTop extends React.Component {
   constructor(props) {
