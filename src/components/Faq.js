@@ -53,8 +53,8 @@ const FAQ = (props) => {
                 content: `after you purchased the NFT, you can decide what to do with it. you can give your nft any price or value.`,
             },
             {
-                title: "Ist he NFT time limited?",
-                content: `No, the NFT is as long as the ethereum blockchain is still active there. be sure you keep your ethereum wallet information safe and secure.`,
+                title: "is the NFT time limited?",
+                content: `no, the NFT is as long as the ethereum blockchain is still active there. be sure you keep your ethereum wallet information safe and secure.`,
             },
         ],
     };
