@@ -30,33 +30,28 @@ const MediaOverview = (props) => {
    // this.setState({seasonName: this.props.match.params.season_name}); - not working probably because of async threads
 
    const url = OpenSea.endpoints.assets.url 
-  // + '?owner=' + OpenSea.walletAddress
-  // + '&asset_contract_address=' + OpenSea.contractAddress
-  + '?limit=60';
+   + '?owner=' + OpenSea.walletAddress
+   + '&asset_contract_address=' + OpenSea.contractAddress;
 
    const _assets = [];
-
    axios.get(url)
      .then(res => res.data)
      .then(res => {
-          
-          console.log(res);
-
-           // localStorage.setItem('assets', JSON.stringify(res.data));
+           console.log(res);
            res.assets.forEach((asset, idx) => { 
-             
             const assetUrl = OpenSea.endpoints.asset.url.replace("{asset_contract_address}", OpenSea.contractAddress).replace("{token_id}", asset.token_id);
-            const internUrl = "/marketplace/asset/" +  OpenSea.contractAddress + "/" + asset.token_id;
+            const routeName = asset.name.split(" ")[1].toLowerCase();
+            const internUrl = "/nft/gallery/" + routeName;
              _assets.push(
                  {"image": asset.image_url,
                   "name": asset.name,
                   "description": asset.description,
                   "assetUrl": assetUrl,
-                  "internUrl": internUrl 
+                  "internUrl": internUrl,
+                  "routeName": routeName,
+                  "price": '' + asset.sell_orders[0].current_price.substr(0,1) + ',' + asset.sell_orders[0].current_price.substr(1,1),
                  });
-               
             })
-          
          })
      
       .then( () => {
@@ -76,6 +71,7 @@ const MediaOverview = (props) => {
           name={asset.name}
           assetUrl={asset.assetUrl}
           internUrl={asset.internUrl}
+          price={asset.price}
         />
       </div>
     )

@@ -14,7 +14,7 @@ const OpenSea = {
         },
     },
     contractAddress: '0x495f947276749ce646f68ac8c248420045cb7b5e',
-    walletAddress: '0x8daa7a15071c95cdee2b6274ad1dd5c1c3c5e285'
+    walletAddress: '0x05e4072151cb06ed757406f41c064ba696573898'
    
 }
   

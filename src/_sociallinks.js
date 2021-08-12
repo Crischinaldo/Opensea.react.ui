@@ -1,31 +1,22 @@
 const socialLinks = {
     items: [
       {
-        link: 'https://twitter.com/#',
+        link: 'https://www.twitter.com/BRAINXRAIN',
         icon: 'twitter',
-        title: 'Follow me on twitter',
+        title: 'Follow BrainXRain on twitter',
         name: 'twitter'
       },
-
       {
-        link: 'https://facebook.com/#',
-        icon: 'facebook',
-        title: 'Follow me on facebook',
-        name: 'facebook'
-      },
-
-      {
-        link: 'https://instagram.com',
+        link: 'https://www.instagram.com/brainxrain',
         icon: 'instagram',
-        title: 'Follow me on instagram',
+        title: 'Follow BrainXRain on instagram',
         name: 'instagram'
       },
-
       {
-        link: 'https://youtube.com',
-        icon: 'youtube',
-        title: 'Follow me on youtube',
-        name: 'youtube'
+        link: 'https://discord.gg/qfDU3fdNcV',
+        icon: 'users',
+        title: 'Join the BrainXRain Discord Server',
+        name: 'discord'
       },
     ],
   };

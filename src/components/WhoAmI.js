@@ -45,7 +45,7 @@ const WhoAmI = (props) => {
             <Card  className={'bg-transparent card-min-height component-transition-1 card-landing ' + visible}>
         <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['user']} /></CardHeader>
         <CardBody>
-          <CardText  className="text-white card-text-about-me">i am a young artist from austria. I've been drawing for as long as I can remember and I love it.</CardText>
+          <CardText  className="text-white card-text-about-me">i am a young artist from austria. i've been drawing for as long as i can remember and i love it.</CardText>
         </CardBody>
       </Card>
       </Col>
@@ -61,7 +61,7 @@ const WhoAmI = (props) => {
       <Card  className={'bg-transparent card-min-height component-transition-2 card-landing ' + visible}>
       <CardHeader className="text-white"><Icon size={64} icon={fontAwesome['bitcoin']} /></CardHeader>
         <CardBody>
-          <CardText className="text-white card-text-about-me">you have the chance to buy my artworks as an original and unique nft for your blockchain. every nft is limited to ONE piece only! Don't miss this chance.</CardText>
+          <CardText className="text-white card-text-about-me">you have the chance to buy my artworks as an original and unique NFT for your blockchain. every NFT is limited to ONE piece only! don't miss this chance.</CardText>
 
         </CardBody>
       </Card>

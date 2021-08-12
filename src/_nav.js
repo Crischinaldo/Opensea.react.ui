@@ -29,27 +29,20 @@ const navigation = {
         dropdown: false
       },
       {
-        route: '/marketplace/assets',
+        route: '/nft/gallery',
         name: 'NFT',
         icon: '',
         dropdown: false
       },
     ],
-    nftItems: [
-
-      {
-        route: '/marketplace/seasons',
-        name: 'Seasons',
-        icon: '',
-        dropdown: false
-      },
-      {
-        route: '/marketplace/assets',
-        name: 'Gallery',
-        icon: '',
-        dropdown: false
-      },
-    ],
+   // nftItems: [
+   //   {
+   //     route: '/nft/gallery',
+   //     name: 'Gallery',
+   //     icon: '',
+   //     dropdown: false
+   //   },
+   // ],
   };
   
   export default navigation;

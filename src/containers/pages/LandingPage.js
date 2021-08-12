@@ -25,6 +25,7 @@ import slideShow1 from '../../assets/videos/slideshow_1.mp4';
 
 const DefaultFooter = React.lazy(() => import('../layout/default/DefaultFooter'));
 const DefaultHeader = React.lazy(() => import('../layout/default/DefaultHeader'));
+const DefaultHeaderTop = React.lazy(() => import('../layout/default/DefaultHeaderTop'));
 
 // https://stackoverflow.com/questions/47891112/how-to-react-js-event-on-scroll-load-other-components
 // https://stackblitz.com/edit/react-ls1dwp scroll

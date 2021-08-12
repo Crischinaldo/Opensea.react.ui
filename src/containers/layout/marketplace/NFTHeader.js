@@ -7,7 +7,7 @@ import LoaderSpinner from '../../../components/widgets/LoaderSpinner';
 import { 
   Container,
   NavbarBrand } from 'reactstrap';
-
+import NFTHeaderTop from './NFTHeaderTop';
 
 
 class NFTHeader extends Component {
@@ -24,9 +24,7 @@ class NFTHeader extends Component {
   const { loading } = this.state;
 
   return (
-    <React.Suspense>
-        <NFTNavigation config={navigation}/>
-    </React.Suspense>
+    < NFTHeaderTop/>
     )
   }
 }

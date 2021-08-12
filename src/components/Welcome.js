@@ -33,10 +33,10 @@ const Welcome = (props) => {
                 <Col className="col-7" md="5">
                     <div className="pl-md-8 mt-5">
                     <h2 className="text-magenta display-3">
-                        Welcome to BrainXRain!
+                        welcome to BRAINXRAIN
                     </h2>
                     <p className="text-white">
-                        We showcase art that you can buy with cryptocurrency. The animations are shown <a
+                        we showcase art that you can buy with cryptocurrency. the animations are shown <a
                   className="font-weight-bold text-info mt-5"
                   href="/marketplace/assets"
 
@@ -47,7 +47,7 @@ const Welcome = (props) => {
                     <br />
                     <div className="btn-wrapper mb-3">
                     <Button onClick={() => { setIsPlaying(true)}} className="btn-round btn-nft" color="magenta" type="button">
-                        Play Video
+                        play video
                     </Button>
                 </div>
                     </div>

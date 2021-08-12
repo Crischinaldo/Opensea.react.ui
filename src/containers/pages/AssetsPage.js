@@ -17,19 +17,19 @@ const AssetsPage = () => {
 
     return (
         <>
-        <Suspense  fallback={LoaderSpinner(isLoading)}>
+        <Suspense fallback={LoaderSpinner(isLoading)}>
             <NFTHeader/>
         </Suspense>
         <div className="wrapper">
         <section className="mt-0 page-min-height bg-gray-smoke nft-overview section section-l">
             <Container>
-            <Suspense  fallback={LoaderSpinner(isLoading)}>
-            <MediaOverview />
+            <Suspense fallback={LoaderSpinner(isLoading)}>
+                <MediaOverview />
             </Suspense>
             </Container>
             </section>
         </div>
-        <Suspense  fallback={LoaderSpinner(isLoading)}>
+        <Suspense fallback={LoaderSpinner(isLoading)}>
             <NFTFooter/>
         </Suspense>
         </>

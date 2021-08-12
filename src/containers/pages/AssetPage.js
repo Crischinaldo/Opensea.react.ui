@@ -31,31 +31,35 @@ const AssetPage = (props) => {
 
     
   useEffect( () => {
+    let currAsset;
+    const assetsUrl = OpenSea.endpoints.assets.url 
+    + '?owner=' + OpenSea.walletAddress
+    + '&asset_contract_address=' + OpenSea.contractAddress;
     // this.setState({seasonName: this.props.match.params.season_name}); - not working probably because of async threads
- //use useParams 
-
-
-// yuo can find all params from here
-    const url = OpenSea.endpoints.asset.url
-        .replace("{asset_contract_address}", OpenSea.contractAddress)
-        .replace("{token_id}", params.asset_id);
-    
-    axios.get(url)
-      .then(res => res.data)
-      .then(res => {
-        console.log(res);
-        setAsset({
-                "image": res.image_url,
-                "name": res.name,
-                "description": res.description,
-                "collection": res.collection,
-                "openseaLink": res.permalink,
-                "price": res.top_bid,
+    //use useParams 
+    axios.get(assetsUrl)
+    .then(res => res.data)
+    .then(res => {
+          res.assets.forEach((asset, idx) => { 
+            if (asset.name.split(" ")[1].toLowerCase() === params.asset_name) {
+              setAsset({
+                "image": asset.image_url,
+                "name": asset.name,
+                "description": asset.description,
+                "collection": asset.collection,
+                "openseaLink": asset.permalink,
+                "price": '' + asset.sell_orders[0].current_price.substr(0,1) + ',' + asset.sell_orders[0].current_price.substr(1,1),
             })
-          })
-       .then( () => {
-         setLoading(false);
+            }
+          });
        })
+      .then( () => {
+        setLoading(false);
+      });
+
+      const url = OpenSea.endpoints.asset.url
+          .replace("{asset_contract_address}", OpenSea.contractAddress)
+          .replace("{token_id}", params.asset_name);
       }, []);
      
     

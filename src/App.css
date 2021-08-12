@@ -14,7 +14,7 @@
 }
 
 .asset-card-wrapper {
-  
+  object-fit: contain;
 }
 
 .App-header {

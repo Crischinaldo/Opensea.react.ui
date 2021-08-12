@@ -119,9 +119,9 @@ const Product = (props) => {
       <Col md="6">
       <div className="pl-md-3">
         <h2 className="text-magenta display-3">
-          What do i get, when i buy an <span className="font-weight-bold">NFT</span> from <span className="font-weight-bold">BrainXRain</span>
+          what do i get, when i buy an <span className="font-weight-bold">NFT</span> from <span className="font-weight-bold">BRAINXRAIN</span>
         </h2>
-        <p className="text-white"> When you buy an original art NFT from BrainXRain you will get the following items:
+        <p className="text-white"> when you buy an original art NFT from BRAINXRAIN you will get the following items:
         </p>
         <div  className="what-do-i-get">
         <Row className="mt-2">
@@ -133,7 +133,7 @@ const Product = (props) => {
             alt="first subproduct"
             src={First}/>
           </Col>
-          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">an animated mp4 file (1.500x1.800px) for your blockchain</span></Col>
+          <Col className="col col-lg-7 align-self-center"><span className="text-white vertical-center">an animated mp4 file (1.500x1.800px)</span></Col>
 
         </Row>
 

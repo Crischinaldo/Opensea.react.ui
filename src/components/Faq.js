@@ -39,22 +39,22 @@ const FAQ = (props) => {
     
         rows: [
             {
-                title: "What is a NFT?",
-                content: `An NFT is a digital asset that represents real-world objects like art, music, in-game items and videos.
+                title: "what is a NFT?",
+                content: `an NFT is a digital asset that represents real-world objects like art, music, in-game items and videos.
                 NFTs are based on a Blockchain, often on the Ethereum blockchain. `,
             },
             {
-                title: "Can someone download my NFT and pretend its his?",
+                title: "can someone download my NFT and pretend its his?",
                 content:
-                    "Your NFT is on the Internet, people can screenshot or download it, but no one else can pretend that he owns hat nft. With your purchase on the Blockchain, people can see that you bought the nft.",
+                    "your NFT is on the Internet, people can screenshot or download it, but no one else can pretend that he owns hat nft. With your purchase on the Blockchain, people can see that you bought the nft.",
             },
             {
-                title: "Will my NFT change in price?",
-                content: `After you purchased the nft, you can decide what to do with it. You can give your nft any price or value.`,
+                title: "will my NFT change in price?",
+                content: `after you purchased the NFT, you can decide what to do with it. you can give your nft any price or value.`,
             },
             {
                 title: "Ist he NFT time limited?",
-                content: `No, the nft is as long as the ethereum blockchain is still active there. Be sure you keep your ethereum wallet information safe and secure.`,
+                content: `No, the NFT is as long as the ethereum blockchain is still active there. be sure you keep your ethereum wallet information safe and secure.`,
             },
         ],
     };

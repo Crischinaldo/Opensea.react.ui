@@ -53,16 +53,16 @@ const Comission = (props) => {
       <Row className="row-grid justify-content-between align-items-center">
           <Col lg="6">
             <h2 className="display-3 text-magenta">
-              You want a unique nft just for you?{" "}          </h2>
+              you want a unique NFT just for you?{" "}          </h2>
             <p className="text-white mb-3">
-            You also have the option to order an <a
+            you also have the option to order an <a
                   className="font-weight-bold text-info mt-5"
                   href="https://www.theverge.com/22310188/nft-explainer-what-is-blockchain-crypto-art-faq"
 
               >
-                  nft{" "}
+                  NFT{" "}
               </a><br/>
-              Tell me your desired topic and your price and i will realize it in my vision and in my style. You get your unique nft which is only aviable once, just for you!
+              tell me your desired topic and your price and i will realize it in my vision and in my style. You get your unique NFT which is only aviable once, just for you!
       
             </p>
           </Col>
