@@ -786,18 +786,33 @@ html {
 }
 
 .trade--main{
-  border-radius: 5px;
   border: 1px solid rgb(229, 232, 235);
-  color: rgb(14, 14, 14);
-  background-color: rgb(247, 230, 252);
   overflow: hidden;
-  padding: 12px;
-
-  
+  background-color: #ffffff;
+  box-shadow: rgb(14 14 14 / 25%) 0px 0px 8px 0px;
+  padding: 1.5rem;
+  width: 90%;
+  margin-left: 1rem;
 }
 
-.btn-buy-nft {
+.trade-card-wrapper {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.asset--price--container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.trade--link {
+  align-self: right;
+}
+.btn-buy-nft {
+  float: right;
   bottom: 0;
   right: 5%;
 }
@@ -809,7 +824,7 @@ html {
 }
 
 .trade--main .trade--label {
-  color: rgb(116, 107, 122);
+  color:rgb(43, 46, 51);
   font-size: 1rem;
 }
 
@@ -825,7 +840,7 @@ html {
 }
 
 .asset--current-price {
-  color:indigo;
+  color:rgb(43, 46, 51);
 }
 
 .eth-logo-big {
@@ -906,4 +921,27 @@ html {
     width: 80%;
    height: 80%;
   }
+}
+
+
+.summary-asset-wrapper {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.bg-darker-gray-4 {
+  background-color: rgb(43, 46, 51) !important;
+}
+
+#bg-darker-gray-4 {
+  background-image: none !important;
+  background-color: rgb(43, 46, 51) !important;
+}
+
+.btn-buy-nft {
+  width: 10rem;
 }

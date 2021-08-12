@@ -65,57 +65,50 @@ const AssetPage = (props) => {
         <Suspense  fallback={LoaderSpinner(isLoading)}>
             <NFTHeader/>
         </Suspense>
-        <div className="nft-wrapper">
-            <section className="page-min-height bg-gray-smoke">
+
+           <section className="mt-0 page-min-height bg-gray-smoke nft-overview section section-l">
                 <Container className="d-flex">
                 {isLoading 
             ? <LoaderSpinner/>
                 :  
-                <Row>      
-                <Col className="item--summary mt-5">
-                <AssetMedia
-                image={asset.image}
-                name={asset.name}
-                />
+                <Row className="summary-asset-wrapper">      
+                <div className="asset-wrapper mt-4">
+                  <AssetMedia
+                  image={asset.image}
+                  name={asset.name}
+                  />
+                </div>
                 
-                </Col>
-
-                <Col className="mt-5">
-                
+                <Col className="mt-4 trade-card-wrapper">
+                <div className="trade--main">
                 <h1 className="text-black">{asset.name}</h1>
                 <p className="item--info-color mb-5">{asset.description}</p>
-                <div class="item--frame">
-                    <section className="item--sell-frame"></section>
-                        <div className="trade--main">
-                            <Row>
-                            <Col>
-                            <div class="trade--label mb-2 ml-2">current price</div>
-                            <div class="trade--price-container"><img alt="eth" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg" size="14" className="eth-logo-big"/><div className="asset--current-price">{!asset.price ? '0.00' : asset.price}</div>
-                            </div>
-                            </Col>
-                            <Col className="trade--flex">
-                                <a href={asset.openseaLink}>
-               
-                                <Button className="btn-round btn-buy-nft" color="magenta" type="button">
-                                    Buy
-                                </Button>
-       
-                                </a>
-                            </Col>
-                            </Row>
+                  
+                      <div className="asset--price--container">
+                          <div class="trade--price-container"><img alt="eth" src="https://storage.opensea.io/files/6f8e2979d428180222796ff4a33ab929.svg" size="14" className="eth-logo-big"/><div className="asset--current-price">{!asset.price ? '0.00' : asset.price}</div>
+                          </div>
+                          
+                            <a href={asset.openseaLink} className="trade--link">
+            
+                            <Button className="btn-round btn-buy-nft" id="bg-darker-gray-4" type="button">
+                                buy now
+                            </Button>
+    
+                            </a>
                         </div>
-                    </div>
+                        </div>
                 </Col>
                 </Row>   
 
                 }
                 </Container>
                 </section>
-                </div>
+
             <Suspense  fallback={LoaderSpinner(isLoading)}>
             <NFTFooter/>
         </Suspense>
         </>
+
     );
 };
 
