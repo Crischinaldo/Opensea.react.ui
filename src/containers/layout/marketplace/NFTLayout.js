@@ -35,7 +35,7 @@ class NFTLayout extends Component {
                 <main className="main">
                     <React.Suspense fallback={LoaderSpinner(loading)}>
                         <Switch>
-                            {_routes.nft.map((route, idx) => {
+                            {_routes.map((route, idx) => {
                             return route.component ? (
                                 <Route
                                 key={idx}
